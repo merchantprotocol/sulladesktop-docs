@@ -1,32 +1,30 @@
 /**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * Merchant Protocol - Terminal-inspired Prism theme
+ * Dark background with green accent coding colors
  */
 
 const theme = {
   plain: {
-    color: '#FFFFFF',
-    backgroundColor: '#282C34',
+    color: '#e6edf3',
+    backgroundColor: '#0d1117',
   },
   styles: [
     {
       types: ['property'],
       style: {
-        color: '#2aa198',
+        color: '#7ee787',
       },
     },
     {
       types: ['attr-name', 'comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: '#93a1a1',
+        color: '#8b949e',
       },
     },
     {
       types: ['punctuation'],
       style: {
-        color: '#657b83',
+        color: '#6e7681',
       },
     },
     {
@@ -38,25 +36,25 @@ const theme = {
     {
       types: ['selector', 'char', 'builtin', 'url'],
       style: {
-        color: '#2aa198',
+        color: '#79c0ff',
       },
     },
     {
       types: ['entity'],
       style: {
-        color: '#2aa198',
+        color: '#7ee787',
       },
     },
     {
       types: ['atrule', 'inserted'],
       style: {
-        color: '#859900',
+        color: '#3FB950',
       },
     },
     {
       types: ['important', 'variable', 'deleted'],
       style: {
-        color: '#cb4b16',
+        color: '#f85149',
       },
     },
     {
@@ -77,47 +75,46 @@ const theme = {
         cursor: 'help',
       },
     },
-    // react-native theme
     {
       types: ['attr-name', 'keyword'],
       style: {
-        color: '#c5a5c5',
+        color: '#ff7b72',
       },
     },
     {
       types: ['string', 'regex', 'attr-value'],
       style: {
-        color: '#8dc891',
+        color: '#a5d6ff',
       },
     },
     {
       types: ['number', 'constant', 'symbol'],
       style: {
-        color: '#5a9bcf',
+        color: '#79c0ff',
       },
     },
     {
       types: ['boolean'],
       style: {
-        color: '#ff8b50',
+        color: '#ff7b72',
       },
     },
     {
       types: ['class-name'],
       style: {
-        color: '#fac863',
+        color: '#ffa657',
       },
     },
     {
       types: ['function'],
       style: {
-        color: '#79b6f2',
+        color: '#d2a8ff',
       },
     },
     {
       types: ['operator', 'tag'],
       style: {
-        color: '#fc929e',
+        color: '#7ee787',
       },
     },
   ],

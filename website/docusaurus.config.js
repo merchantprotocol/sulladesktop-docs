@@ -14,12 +14,16 @@ const isDeployPreview = process.env.PREVIEW_DEPLOY === 'true';
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Protocol Documentation',
-  tagline: 'Continuous deployment and configuration management for PHP applications.',
+  tagline:
+    'Continuous deployment and configuration management for PHP applications.',
   organizationName: 'merchantprotocol',
   projectName: 'protocol-docs',
   url: 'https://docs.merchantprotocol.com',
   baseUrl: '/',
-  clientModules: [require.resolve('./modules/jumpToFragment.js')],
+  clientModules: [
+    require.resolve('./modules/jumpToFragment.js'),
+    require.resolve('./modules/crtEffects.js'),
+  ],
   trailingSlash: false,
   scripts: [
     {
@@ -27,7 +31,7 @@ module.exports = {
       defer: true,
     },
   ],
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   titleDelimiter: '·',
   i18n: {
     defaultLocale: 'en',
@@ -52,6 +56,7 @@ module.exports = {
         docs: {
           path: '../docs',
           sidebarPath: require.resolve('./sidebars.json'),
+          routeBasePath: '/',
           ...commonDocsOptions,
         },
         blog: {
@@ -80,18 +85,20 @@ module.exports = {
       prism: {
         defaultLanguage: 'bash',
         theme: require('./core/PrismTheme'),
-        additionalLanguages: [
-          'diff',
-          'bash',
-          'json',
-          'yaml',
-          'php',
-          'ini',
-        ],
+        additionalLanguages: ['diff', 'bash', 'json', 'yaml', 'php', 'ini'],
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Protocol',
-        style: 'primary',
+        logo: {
+          src: 'img/terminal-icon.svg',
+          alt: 'Protocol',
+        },
+        style: 'dark',
         items: [
           {
             type: 'doc',
@@ -163,26 +170,32 @@ module.exports = {
       },
       image: 'img/logo-og.png',
       footer: {
-        style: 'light',
+        logo: {
+          src: 'img/terminal-icon.svg',
+          alt: 'Protocol',
+          width: 24,
+          height: 24,
+        },
+        style: 'dark',
         links: [
           {
             title: 'Documentation',
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/getting-started',
+                to: '/getting-started',
               },
               {
                 label: 'Installation',
-                to: '/docs/installation',
+                to: '/installation',
               },
               {
                 label: 'Commands',
-                to: '/docs/commands',
+                to: '/commands',
               },
               {
                 label: 'Configuration',
-                to: '/docs/configuration',
+                to: '/configuration',
               },
             ],
           },
@@ -191,15 +204,15 @@ module.exports = {
             items: [
               {
                 label: 'Deployment Strategies',
-                to: '/docs/deployment-types',
+                to: '/deployment-types',
               },
               {
                 label: 'Secrets Management',
-                to: '/docs/secrets',
+                to: '/secrets',
               },
               {
                 label: 'Security & SOC 2',
-                to: '/docs/security',
+                to: '/security',
               },
             ],
           },
@@ -219,8 +232,6 @@ module.exports = {
         ],
         copyright,
       },
-      metadata: [
-        {name: 'twitter:card', content: 'summary_large_image'},
-      ],
+      metadata: [{name: 'twitter:card', content: 'summary_large_image'}],
     }),
 };
