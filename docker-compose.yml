@@ -1,0 +1,18 @@
+services:
+  app:
+    container_name: www-heropixel-com
+    image: byrdziak/merchantprotocol-webserver-nginx-php8.1:initial
+    restart: unless-stopped
+    hostname: ${DOCKER_HOSTNAME}
+    ports:
+      - "80:80"
+      - "443:443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ".:/var/www/html:rw"
+      - "../www-heropixel-com-config/:/var/www/www-heropixel-com-config:rw"
+    ulimits:
+      core:
+        hard: 0
+        soft: 0

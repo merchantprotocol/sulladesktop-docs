@@ -1,0 +1,19 @@
+{
+    "name": "www-heropixel-com",
+    "docker": {
+        "container_name": "www-heropixel-com",
+        "image": null
+    },
+    "git": {
+        "remote": "git@github.com:Signal-ID\/www-heropixel-com.git",
+        "remotename": "origin",
+        "branch": "main"
+    },
+    "configuration": {
+        "local": "..\/www-heropixel-com-config",
+        "remote": "git@github.com:Signal-ID\/www-heropixel-com-config.git",
+        "environments": [
+            "localhost-byrdziak"
+        ]
+    }
+}

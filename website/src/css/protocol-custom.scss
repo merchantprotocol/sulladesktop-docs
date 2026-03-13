@@ -1,0 +1,671 @@
+@use "shared" as *;
+
+/**
+* @license
+*
+* Font Family: General Sans
+* Designed by: Frode Helland
+* URL: https://www.fontshare.com/fonts/general-sans
+* © 2024 Indian Type Foundry
+*
+* General Sans Extralight 
+* General Sans ExtralightItalic 
+* General Sans Light 
+* General Sans LightItalic 
+* General Sans Regular 
+* General Sans Italic 
+* General Sans Medium 
+* General Sans MediumItalic 
+* General Sans Semibold 
+* General Sans SemiboldItalic 
+* General Sans Bold 
+* General Sans BoldItalic 
+* General Sans Variable (Variable font)
+* General Sans VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "GeneralSans-Extralight";
+  src: url("./fonts/GeneralSans-Extralight.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Extralight.woff") format("woff"),
+    url("./fonts/GeneralSans-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-ExtralightItalic";
+  src: url("./fonts/GeneralSans-ExtralightItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-ExtralightItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-ExtralightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Light";
+  src: url("./fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Light.woff") format("woff"),
+    url("./fonts/GeneralSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-LightItalic";
+  src: url("./fonts/GeneralSans-LightItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-LightItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Regular";
+  src: url("./fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Regular.woff") format("woff"),
+    url("./fonts/GeneralSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-Italic";
+  src: url("./fonts/GeneralSans-Italic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Italic.woff") format("woff"),
+    url("./fonts/GeneralSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("./fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Medium.woff") format("woff"),
+    url("./fonts/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-MediumItalic";
+  src: url("./fonts/GeneralSans-MediumItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-MediumItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("./fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Semibold.woff") format("woff"),
+    url("./fonts/GeneralSans-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-SemiboldItalic";
+  src: url("./fonts/GeneralSans-SemiboldItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-SemiboldItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Bold";
+  src: url("./fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Bold.woff") format("woff"),
+    url("./fonts/GeneralSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-BoldItalic";
+  src: url("./fonts/GeneralSans-BoldItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-BoldItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 700.0;
+  *
+  * available axes:
+  'wght' (range from 200.0 to 700.0
+  */
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src: url("./fonts/GeneralSans-Variable.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Variable.woff") format("woff"),
+    url("./fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 700.0;
+  *
+  * available axes:
+  'wght' (range from 200.0 to 700.0
+  */
+@font-face {
+  font-family: "GeneralSans-VariableItalic";
+  src: url("./fonts/GeneralSans-VariableItalic.woff2") format("woff2"),
+    url("./fonts/GeneralSans-VariableItalic.woff") format("woff"),
+    url("./fonts/GeneralSans-VariableItalic.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* Doc Item footer metadata */
+
+.theme-doc-footer {
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
+  font-size: 15px;
+  color: var(--subtle);
+
+  a {
+    @extend %button-link-style;
+
+    svg {
+      color: var(--ifm-color-primary);
+      display: inline;
+    }
+  }
+
+  .lastUpdated {
+    font-size: 13px;
+    text-align: right;
+  }
+
+  time,
+  strong {
+    font-weight: 600;
+  }
+
+  .theme-last-updated {
+    line-height: 18px;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 996px) {
+  .theme-doc-footer .col {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+  .theme-doc-footer .col {
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/* Doc Item footer metadata */
+
+.theme-doc-footer {
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
+  font-size: 15px;
+  color: var(--subtle);
+
+  a {
+    @extend %button-link-style;
+
+    svg {
+      color: var(--ifm-color-primary);
+    }
+  }
+
+  .lastUpdated {
+    font-size: 13px;
+    text-align: right;
+  }
+
+  time,
+  strong {
+    font-weight: 600;
+  }
+
+  .theme-last-updated {
+    line-height: 18px;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 996px) {
+  .theme-doc-footer .col {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+  .theme-doc-footer .col {
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/* Docs Rating Box */
+
+.docsRating {
+  display: inline-block;
+  padding: 16px 30px 16px 40px;
+  min-height: 66px;
+  margin-top: 42px;
+  background-color: rgba(100, 215, 255, 0.3);
+  text-align: center;
+  color: #057594;
+  line-height: 32px;
+  font-weight: 500;
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 0 0 6px;
+    display: inline;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      fill: var(--ifm-color-primary);
+    }
+  }
+
+  .i_thumbsup {
+    fill: #56a211;
+    transform: translateY(0.25em);
+    margin-left: 12px;
+  }
+
+  .i_thumbsdown {
+    fill: #e9430f;
+    transform: scale(-1, -1) translateY(-0.25em);
+  }
+}
+
+html[data-theme="dark"] .docsRating {
+  color: #cee9f3;
+}
+
+@media only screen and (max-width: 996px) {
+  .docsRating {
+    width: 100%;
+    margin: 36px 0 0 !important;
+    border-radius: var(--ifm-global-radius);
+  }
+}
+
+/* Footer */
+
+.footer {
+  &.footer--dark {
+    --ifm-footer-background-color: var(--deepdark);
+  }
+
+  .container {
+    max-width: 900px;
+    background-color: transparent;
+  }
+
+  .text--center {
+    color: #858a96;
+    font-size: 13px;
+  }
+
+  .footer__item {
+    font-size: 14px;
+    padding: 8px 0 0;
+    min-height: 30px;
+
+    a:hover svg {
+      color: var(--brand);
+    }
+  }
+
+  .footer__title {
+    color: #858a96;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+  }
+
+  .footer__col {
+    margin: 4px 0 12px 2%;
+    padding: 2.5rem 5rem !important;
+    padding-left: 0 !important;
+  }
+
+  .footer__link-item {
+    line-height: 1.44;
+    display: inline-block;
+  }
+
+  .footer__links {
+    margin-bottom: 8px;
+  }
+
+  svg[class^="iconExternalLink"] {
+    color: var(--subtle);
+    right: -1px;
+    width: 9px;
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .footer {
+    .footer__col {
+      text-align: center;
+      flex-basis: 48% !important;
+      max-width: 48% !important;
+      margin-bottom: 28px;
+    }
+
+    .footer__links {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer.footer {
+    div.footer__col {
+      flex-basis: 99% !important;
+      max-width: 99% !important;
+      margin-bottom: 24px;
+      text-align: center;
+      padding: 0.5rem 0rem 2.5rem 0 !important;
+    }
+    .footer__bottom img {
+      width: 60%;
+    }
+    .container > div > div:first-child {
+      padding: 0.5rem 0rem 2.5rem 0 !important;
+    }
+  }
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--neutral-mid-700);
+  text-decoration: var(--ifm-link-decoration);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--neutral-mid-700);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+}
+
+h1 {
+  font-size: var(--ifm-h1-font-size);
+}
+
+h2 {
+  font-size: var(--ifm-h2-font-size);
+}
+
+h3 {
+  font-size: var(--ifm-h3-font-size);
+}
+
+h4 {
+  font-size: var(--ifm-h4-font-size);
+}
+
+h5 {
+  font-size: var(--ifm-h5-font-size);
+}
+
+h6 {
+  font-size: var(--ifm-h6-font-size);
+}
+
+.content-banner {
+  background: #99d5e7;
+  color: var(--dark);
+  left: -1em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 1em 1.2em;
+  position: relative;
+  width: calc(100% + 1em);
+}
+.content-banner-img {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  width: 25%;
+}
+.content-banner p {
+  margin: 0;
+  width: calc(75% - 2em);
+}
+
+blockquote,
+pre {
+  margin: 0 0 var(--ifm-spacing-vertical);
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote {
+  border-left: var(--ifm-blockquote-border-left-width) solid
+    var(--ifm-blockquote-border-color);
+  box-shadow: var(--ifm-blockquote-shadow);
+  color: var(--ifm-blockquote-color);
+  font-size: var(--ifm-blockquote-font-size);
+  padding: var(--ifm-blockquote-padding-vertical)
+    var(--ifm-blockquote-padding-horizontal);
+}
+
+.markdown blockquote {
+  border-left: 8px solid var(--ifm-color-warning);
+  padding: 15px 30px 15px 15px;
+}
+
+.alert--warning,
+.markdown blockquote {
+  background-color: var(--rn-note-background);
+}
+
+.theme-doc-markdown p img {
+  max-width: 50%;
+  float: right;
+  padding: 0 0 20px 20px;
+}
+
+.container > div > div:first-child {
+  border-right: none;
+}
+.column {
+  --ifm-col-width: 100%;
+  flex: 1 0;
+  margin-left: 0;
+  max-width: var(--ifm-col-width);
+  width: 100%;
+}
+.column,
+.container {
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+.column {
+  --ifm-col-width: 100%;
+  flex: 1 0;
+  margin-left: 0;
+  max-width: var(--ifm-col-width);
+  padding: 0 var(--ifm-spacing-horizontal);
+  width: 100%;
+}
+
+iframe.statusiframe {
+  width: 250px;
+  max-width: 250px;
+  height: 30px;
+}
+
+.dochero {
+  background-color: #f6f8fa;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.dochero h1 {
+  margin-bottom: 0 !important;
+}
+
+.dochero h2 {
+  margin-top: 0 !important;
+  font-size: 24px;
+  font-family: "GeneralSans-Regular";
+  color: var(--ifm-color-gray-600);
+}
+
+.dochero .container {
+  background-color: #f6f8fa;
+}
+
+.page-docs .container .row {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.page-docs div.container.padding-top--md {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.page-docs div.container {
+  background-color: transparent;
+}
+
+.page-docs .container > div > div:first-child {
+  padding: 0 !important;
+}
+
+.dochero .card-wrapper-2 .card,
+.page-docs .card-wrapper .card {
+  border: none;
+  box-shadow: none;
+}
+.page-docs .card a {
+  margin-left: 0px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--ifm-color-primary-darker);
+}
+
+.LandingPage {
+  .main-wrapper {
+    margin-top: -56px;
+  }
+
+  .navbar {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    padding: 24px 0 0 48px;
+    position: relative;
+
+    .navbar__items--right {
+      display: none;
+    }
+
+    .navbar__item {
+      iframe {
+        display: none;
+      }
+    }
+  }
+}
+.AppList {
+  grid-gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0;
+}
+.AppList .item,
+.containsTaskList_QWGu {
+  list-style: none;
+}
+.AppList .item img {
+  border-radius: 16px;
+  box-shadow: 0 6px 14px hsla(0, 0%, 8%, 0.08);
+  overflow: hidden;
+}
+
+.navbar {
+  .navbar-github-link {
+    &:after {
+      transition: opacity 0.2s;
+      content: "";
+      width: 24px;
+      height: 24px;
+      display: flex;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='currentColor' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--primary-neutral-800);
+    }
+
+    &:hover:after {
+      opacity: 0.5;
+    }
+  }
+}
+
+.navbar-sidebar {
+  .navbar-github-link {
+    &:after {
+      content: "GitHub";
+      background-image: none;
+      height: 20px;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+}

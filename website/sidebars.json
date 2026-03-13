@@ -1,0 +1,31 @@
+{
+  "docs": {
+    "Introduction": [
+      "index",
+      "getting-started",
+      "installation"
+    ],
+    "Usage": [
+      "commands",
+      "configuration",
+      "secrets"
+    ],
+    "Deployment": [
+      "deployment-types",
+      "blue-green",
+      "deployment-sops",
+      "migration"
+    ],
+    "Architecture": [
+      "architecture",
+      "troubleshooting"
+    ],
+    "Security & Compliance": [
+      "security",
+      "soc2",
+      "soc2-controls-matrix",
+      "key-rotation",
+      "incident-response"
+    ]
+  }
+}
