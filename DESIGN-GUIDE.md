@@ -12,14 +12,14 @@
 
 2. **Magazine Editorial** — Playfair Display serif headlines at 900 weight, magazine-style layouts, running headers, pull quotes with green left borders, drop caps. Think Bloomberg Businessweek meets a hacker zine.
 
-3. **Cinematic** — CRT scanlines, film grain noise, vignette darkening at edges, Matrix-style green character rain behind content, radial green glows, cursor glow that follows the mouse.
+3. **Cinematic** — Static CRT scanlines, film grain noise, vignette darkening at edges, radial green glows, cursor glow that follows the mouse. Matrix-style green character rain is optional and site-specific (e.g. marketing homepage only, not documentation sites).
 
 **The mood is:**
 
 - Dark, moody, premium — not playful or startup-y
 - Terminal/hacker energy — green-on-black, monospace, command prompts
 - Editorial sophistication — serif headlines, magazine-style layouts
-- Cinematic atmosphere — CRT scanlines, film grain, Matrix rain, vignette
+- Cinematic atmosphere — static CRT scanlines, film grain, vignette, cursor glow
 - Confident & sparse — lots of negative space, no clutter, no unnecessary color
 - Masculine, cinematic — no pastels, no bubbly UI, no light themes
 
@@ -200,7 +200,7 @@ Three font families, each with a specific role:
 
 ## 4. ATMOSPHERIC OVERLAYS (CRT EFFECTS)
 
-These three fixed overlays create the "CRT monitor" feel:
+These fixed overlays create the "CRT monitor" feel. **CRT scanlines are static — no animation.** The overlay is frozen in place.
 
 ### CRT Scanlines (z-index: 10000)
 
@@ -212,6 +212,7 @@ These three fixed overlays create the "CRT monitor" feel:
   z-index: 10000;
 }
 
+/* Static scanlines — NO animation */
 .crt-overlay::before {
   content: '';
   position: absolute;
@@ -220,10 +221,9 @@ These three fixed overlays create the "CRT monitor" feel:
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
   );
-  animation: scanlines 0.1s steps(2) infinite;
 }
 
 /* Vignette — darkened edges */
@@ -236,15 +236,6 @@ These three fixed overlays create the "CRT monitor" feel:
     transparent 50%,
     rgba(0, 0, 0, 0.4) 100%
   );
-}
-
-@keyframes scanlines {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(4px);
-  }
 }
 ```
 
@@ -279,9 +270,11 @@ These three fixed overlays create the "CRT monitor" feel:
 }
 ```
 
-### Matrix Rain Canvas (z-index: 0)
+### Matrix Rain Canvas (z-index: 0) — OPTIONAL
 
-The Matrix rain sits BEHIND all content. Content sections need `position: relative; z-index: 1;` and a solid background to cover it.
+Matrix rain is **optional and site-specific**. Use it on marketing/hero pages where atmosphere matters. **Do NOT use it on documentation sites** — it's distracting when reading technical content.
+
+When used, it sits BEHIND all content. Content sections need `position: relative; z-index: 1;` and a solid background to cover it.
 
 ```css
 #matrixCanvas {
@@ -292,17 +285,6 @@ The Matrix rain sits BEHIND all content. Content sections need `position: relati
   opacity: 0.15;
 }
 ```
-
-**JavaScript specs:**
-
-- Characters: Katakana + Latin + digits + symbols
-- Font size: 14px monospace
-- ~30% of columns active at a time
-- Trail fade: `rgba(13, 17, 23, 0.06)` per frame
-- Character color: `rgba(63, 185, 80, 0.8)` with bright head `#7ee787`
-- Drop speed: `0.5 + Math.random() * 0.5`
-- Reset threshold: `Math.random() > 0.975`
-- Draw interval: 50ms (20fps)
 
 ---
 
@@ -547,13 +529,13 @@ box-shadow: 0 0 15px var(--green-glow), 0 0 30px var(--green-glow-soft);
 ### Z-Index Stack
 
 ```
-     0  — Matrix rain canvas
-     1  — Content sections (with solid bg, covering Matrix rain)
+     0  — Matrix rain canvas (optional, marketing pages only)
+     1  — Content sections (with solid bg)
     10  — Hero content
   9000  — Navigation
   9998  — Cursor glow
   9999  — Film grain overlay
- 10000  — CRT scanlines + vignette overlay
+ 10000  — CRT scanlines + vignette overlay (static, no animation)
 ```
 
 ---
@@ -609,7 +591,8 @@ cubic-bezier(0.16, 1, 0.3, 1)  /* Spring-like ease-out */
 - **Bright gradients or multi-color palettes** — green-on-black only
 - **Playful/rounded/bubbly UI** — this is noir, not startup
 - **Pastel colors or feminine styling** — masculine, cinematic aesthetic
-- **Heavy Matrix rain over content** — rain is behind content, subtle
+- **Matrix rain on documentation/content-heavy sites** — reserve for marketing pages only
+- **Animated CRT scanlines** — scanline overlay must be static/frozen, never moving
 - **External CSS frameworks** — custom styles only
 - **Default/generic styling** — every element should feel intentional
 

@@ -93,7 +93,7 @@ module.exports = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Protocol',
+        title: 'PROTOCOL',
         logo: {
           src: 'img/terminal-icon.svg',
           alt: 'Protocol',
@@ -104,12 +104,12 @@ module.exports = {
             type: 'doc',
             docId: 'getting-started',
             label: 'Getting Started',
-            position: 'left',
+            position: 'right',
           },
           {
             label: 'Guides',
             type: 'dropdown',
-            position: 'left',
+            position: 'right',
             items: [
               {
                 label: 'Installation',
@@ -136,7 +136,7 @@ module.exports = {
           {
             label: 'Operations',
             type: 'dropdown',
-            position: 'left',
+            position: 'right',
             items: [
               {
                 label: 'Deployment Strategies',
@@ -162,7 +162,7 @@ module.exports = {
           },
           {
             href: 'https://github.com/merchantprotocol/protocol',
-            'aria-label': 'GitHub repository',
+            label: 'merchantprotocol/protocol',
             position: 'right',
             className: 'navbar-github-link',
           },
