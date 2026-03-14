@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 export default function InstallSection() {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'curl -sSL https://merchantprotocol.com/install | bash';
+  const installCmd = 'brew install --cask sulla-desktop';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);
@@ -84,7 +84,7 @@ export default function InstallSection() {
             marginBottom: 16,
             lineHeight: 1.3,
           }}>
-          Paste this into any server terminal.
+          Install Sulla Desktop with one command.
         </h2>
 
         {/* Subtext */}
@@ -96,8 +96,8 @@ export default function InstallSection() {
             marginBottom: 40,
             lineHeight: 1.6,
           }}>
-          Protocol handles the rest — detection, installation, and
-          configuration.
+          Sulla Desktop handles the rest — AI, containers, and automation all
+          set up automatically.
         </p>
 
         {/* Terminal */}
@@ -236,7 +236,7 @@ export default function InstallSection() {
             marginTop: 32,
             flexWrap: 'wrap',
           }}>
-          {['Linux', 'macOS', 'Docker', 'WSL'].map(platform => (
+          {['macOS', 'Windows', 'Linux'].map(platform => (
             <span
               key={platform}
               style={{

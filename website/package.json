@@ -1,13 +1,13 @@
 {
-  "name": "protocol-docs-website",
-  "description": "Protocol documentation website",
+  "name": "sulla-desktop-docs-website",
+  "description": "Sulla Desktop documentation website",
   "version": "0.0.1",
   "private": true,
   "license": "CC-BY-4.0",
-  "homepage": "https://docs.merchantprotocol.com/",
-  "repository": "github:merchantprotocol/protocol-docs",
+  "homepage": "https://sulladesktop.com/",
+  "repository": "github:sulla-ai/sulla-desktop",
   "bugs": {
-    "url": "https://github.com/merchantprotocol/protocol-docs/issues"
+    "url": "https://github.com/sulla-ai/sulla-desktop/issues"
   },
   "scripts": {
     "clean": "rm -rf build .docusaurus",

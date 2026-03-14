@@ -1,296 +1,73 @@
-# Getting Started with Protocol
+---
+sidebar_position: 2
+sidebar_label: Getting Started
+slug: /getting-started
+---
 
-Protocol manages your entire deployment pipeline — from your local machine to production. You set it up once, and from then on, pushing code to GitHub is all it takes to deploy.
+# Getting Started with Sulla Desktop
 
-This guide walks you through everything, start to finish.
+Welcome to Sulla Desktop! This guide will help you get up and running quickly.
 
-## What You're Building
+## Installation
 
-By the end of this guide, you'll have:
+### Download Pre-built Installers
 
-- A project that runs in Docker with one command
-- A config repo that stores your `.env` files safely in git (encrypted)
-- A production server that auto-deploys when you push code
-- Secrets that travel encrypted and decrypt themselves on arrival
+Visit our [downloads page](https://sulladesktop.ai/downloads.html) to get the installer for your operating system:
 
-Think of Protocol as the glue between your code, your Docker containers, your configs, and your servers.
+- **macOS**: Download the .dmg file
+- **Windows**: Download the .exe installer
+- **Linux**: Download the .AppImage
 
-## Install Protocol
+### Build from Source
 
-On any Mac or Linux machine:
-
-```bash
-sudo curl -L "https://raw.githubusercontent.com/merchantprotocol/protocol/master/bin/install" | bash
-```
-
-Verify it worked:
+If you prefer to build from source:
 
 ```bash
-protocol -v
+git clone https://github.com/sulla-ai/sulla-desktop.git
+cd sulla-desktop
+yarn install
+yarn dev  # For development
+yarn build  # For production
 ```
 
-## Set Your Environment Name
+## First Steps
 
-Every machine gets a name. This tells Protocol which config files belong to this machine.
+1. **Launch Sulla Desktop**: After installation, launch the application from your Applications folder (macOS), Start Menu (Windows), or application launcher (Linux).
 
-```bash
-protocol config:env localhost-yourname
-```
+2. **Initial Setup**: The first time you run Sulla Desktop, you'll be guided through the initial setup process.
 
-Use something descriptive. Common patterns:
+3. **Configure Your AI Assistant**: Set up your preferred AI model and configure your workspace settings.
 
-| Machine | Environment name |
-|---|---|
-| Your laptop | `localhost-sarah` |
-| Staging server | `staging` |
-| Production server | `production` |
+## Getting Help
 
-This name becomes a branch in your config repo. More on that soon.
+### Community Support
 
-## Initialize Your Project
+- **GitHub Discussions**: Join our [community forum](https://github.com/sulla-ai/sulla-desktop/discussions) for free support
+- **Bug Reports**: Report issues on [GitHub Issues](https://github.com/sulla-ai/sulla-desktop/issues)
 
-Navigate to your project and run the setup wizard:
+### Premium Support
 
-```bash
-cd /path/to/your/project
-protocol init
-```
+For direct access to our developers and priority support, join our [SKOOL community](https://www.skool.com/sulla) ($47/month).
 
-Protocol looks at your project and figures out what you need. You'll see a menu with colored dots — use arrow keys to pick, Enter to confirm:
+## Next Steps
 
-```
-  ● Start a new project                    recommended
-  ○ Connect an existing repository
-  ○ Make this a slave node (production / staging deploy)
-  ○ Update an existing Protocol project
-```
+- Browse the [documentation](https://github.com/sulla-ai/sulla-desktop/tree/main/docs) to learn about advanced features
+- Check out example workflows and use cases
+- Join our community to connect with other users
 
-### What the Wizard Does
+## System Requirements
 
-**Step 1 — Project Type.** Pick your Docker base image. Protocol ships with PHP 8.1, 8.2, and 8.2+FFmpeg images. Or bring your own.
+- **macOS**: macOS 11 Big Sur or later
+- **Windows**: Windows 10 or later
+- **Linux**: Ubuntu 20.04 or equivalent
+- **RAM**: Minimum 8GB (16GB recommended)
+- **Storage**: 2GB available space
 
-**Step 2 — Deployment Strategy.** Two choices:
+## License
 
-- **Release-based** (recommended) — You create tagged releases. Each server checks out a specific version. You can roll back instantly.
-- **Branch-based** — Servers follow the tip of a branch. Simpler, but no rollback safety net.
+Sulla Desktop uses a dual licensing model:
 
-For the full breakdown of each strategy (including shadow/zero-downtime deploys), see [Deployment Strategies](deployment-types.md).
+- Core components are licensed under Apache License 2.0
+- Additional features are under proprietary license
 
-**Step 3 — Secrets.** Optionally generate an encryption key for your `.env` files. You can do this now or later.
-
-**Step 4 — Config Repository.** Optionally create a config repo to store your environment files. Again, now or later.
-
-When it's done, you'll have:
-
-- `protocol.json` — your project's Protocol settings
-- `docker-compose.yml` — ready to run your containers
-- Override directories (`nginx.d/`, `cron.d/`, `supervisor.d/`) — for custom server configs
-
-All committed to git automatically.
-
-## Start Everything Locally
-
-```bash
-protocol start
-```
-
-That's it. Protocol will:
-
-1. Build and start your Docker containers
-2. Link your config files (if you set up a config repo)
-3. Decrypt any encrypted secrets (if you set up encryption)
-4. Show you the status when it's done
-
-Check what's running:
-
-```bash
-protocol status
-```
-
-Stop everything:
-
-```bash
-protocol stop
-```
-
-## Set Up Your Config Repository
-
-Your project probably has files that shouldn't live in the main repo — `.env` files, nginx configs, cron schedules. Protocol stores these in a **separate git repo** next to your project.
-
-```
-your-project/           ← your code
-your-project-config/    ← your configs (separate git repo)
-```
-
-Each branch in the config repo is an environment. Your laptop uses the `localhost-sarah` branch. Production uses the `production` branch. Same repo, different configs.
-
-Run the config wizard:
-
-```bash
-protocol config:init
-```
-
-### First Time
-
-The wizard walks you through:
-
-1. **Environment** — Confirms your environment name
-2. **Repository** — Creates the config repo (or clones one if you have a remote URL in `protocol.json`)
-3. **Secrets & Encryption** — Generates an encryption key and encrypts any `.env` files
-4. **Remote** — Optionally connects a git remote so other nodes can pull this config
-
-### Already Have a Config Repo
-
-If you've done this before, you'll see a menu instead:
-
-```
-  ● Encrypt secrets           ← recommended
-  ○ Decrypt secrets
-  ○ Re-initialize config repo (wipes existing)
-  ○ Cancel
-```
-
-Protocol looks at your files and recommends the right action. Unencrypted `.env` files? It recommends encrypting. Encrypted files but no key on this machine? It recommends decrypting.
-
-### Adding Config Files
-
-Drop files into the config repo and they'll be symlinked into your project when you run `protocol start`:
-
-```bash
-# Example: add an .env file
-cp .env ../your-project-config/.env
-
-# Encrypt it
-protocol config:init   # → choose Encrypt secrets
-
-# Push to remote
-cd ../your-project-config
-git push
-```
-
-For the full secrets story — encryption, key distribution, GitHub Actions — see [Secrets Management](secrets.md).
-
-## Re-Running Setup
-
-Already initialized? No problem. Run `protocol init` again and it detects your project:
-
-```
-  ○ Start a new project
-  ○ Connect an existing repository
-  ● Update an existing Protocol project     recommended
-```
-
-Choose **Update** and you get a menu:
-
-```
-  ● Fix / Migrate — regenerate configs, fix paths, update structure
-  ○ Re-run full project setup from scratch
-  ○ Change deployment strategy
-  ○ Set up encrypted secrets
-  ○ Initialize configuration repository
-  ○ Exit without changes
-```
-
-**Fix / Migrate** is the most common choice. It checks your `protocol.json` version against the current schema, runs any needed migrations, fixes broken paths, and ensures your scaffold directories exist. Safe to run anytime.
-
-## Deploy to Production
-
-### First-Time Server Setup
-
-On your production server:
-
-```bash
-# 1. Install protocol
-sudo curl -L "https://raw.githubusercontent.com/merchantprotocol/protocol/master/bin/install" | bash
-
-# 2. Set the environment
-protocol config:env production
-
-# 3. Set up the encryption key (so it can decrypt your secrets)
-protocol secrets:setup "your-64-character-hex-key"
-
-# 4. Clone your app and start
-git clone git@github.com:yourorg/yourapp.git /opt/yourapp
-cd /opt/yourapp
-protocol start
-```
-
-Protocol handles the rest — clones the config repo, checks out the `production` branch, decrypts your secrets, starts Docker, and begins watching for updates.
-
-### Getting the Key to Production
-
-From your dev machine, pick whichever works:
-
-```bash
-# SCP the key file directly
-protocol secrets:key --scp=deploy@production-server
-
-# Push to GitHub (for CI/CD pipelines)
-protocol secrets:key --push
-
-# Or just view it and paste
-protocol secrets:key
-```
-
-See [Secrets Management](secrets.md) for the full details.
-
-### Surviving Reboots
-
-Add Protocol to crontab so it restarts after a server reboot:
-
-```bash
-protocol cron:add
-```
-
-### Updating Protocol Itself
-
-```bash
-protocol self:update
-```
-
-This checks out the latest release. If you want the bleeding edge:
-
-```bash
-protocol self:update --nightly
-```
-
-## What's Next
-
-| Want to... | Run this |
-|---|---|
-| Create a release | `protocol release:create` |
-| Deploy a specific version | `protocol deploy:push v1.2.3` |
-| Roll back a bad deploy | `protocol deploy:rollback` |
-| Check what's running | `protocol status` |
-| Run a command inside Docker | `protocol docker:exec "php artisan migrate"` |
-| View nginx logs | `protocol nginx:logs` |
-| See all commands | `protocol list` |
-
-## The Big Picture
-
-Here's how all the pieces fit together:
-
-```
-                          GitHub
-                      ┌─────────────────────┐
-                      │  App Repo            │
-                      │  Config Repo         │
-                      │  Secrets (encrypted) │
-                      │  Release Tags        │
-                      └──────┬──────────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-              ▼              ▼              ▼
-         ┌─────────┐   ┌─────────┐   ┌─────────┐
-         │ Dev      │   │ Staging │   │ Prod    │
-         │          │   │         │   │         │
-         │ protocol │   │ protocol│   │ protocol│
-         │ start    │   │ start   │   │ start   │
-         │          │   │         │   │         │
-         │ localhost│   │ staging │   │ prod    │
-         │ branch   │   │ branch  │   │ branch  │
-         └─────────┘   └─────────┘   └─────────┘
-```
-
-Each node runs `protocol start`, pulls its own config branch, decrypts with the shared key, and serves the app. Push code to GitHub, and every node picks it up automatically.
+For more information, see our [Terms of Use](https://sulladesktop.ai/terms.html).

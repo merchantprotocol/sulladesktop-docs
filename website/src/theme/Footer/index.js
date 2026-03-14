@@ -1,5 +1,5 @@
 /**
- * Custom Footer component matching the main Merchant Protocol website.
+ * Custom Footer component for the Sulla Desktop documentation site.
  */
 import React from 'react';
 
@@ -14,18 +14,14 @@ function Footer() {
         <div className="mp-footer__grid">
           {/* Brand + Social */}
           <div className="mp-footer__brand">
-            <div className="mp-footer__brand-name">Merchant Protocol</div>
-            <div className="mp-footer__brand-vol">
-              VOL. XVIII &middot; Est. 2008
-            </div>
+            <div className="mp-footer__brand-name">Sulla Desktop</div>
+            <div className="mp-footer__brand-vol">AI-Powered Desktop App</div>
             <div className="mp-footer__brand-tagline">
-              Full-stack AI specialists.
-              <br />
-              Coeur d&rsquo;Alene, ID.
+              Docker, automation, and local LLMs.
             </div>
             <div className="mp-footer__social">
               <a
-                href="https://github.com/merchantprotocol"
+                href="https://github.com/sulla-ai"
                 className="mp-footer__social-icon"
                 aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -33,15 +29,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/marketing-consultant-digital-marketing-specialist/"
-                className="mp-footer__social-icon"
-                aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a
-                href="https://x.com/byrdziakmedia"
+                href="https://x.com/sulladesktop"
                 className="mp-footer__social-icon"
                 aria-label="X / Twitter">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -58,54 +46,34 @@ function Footer() {
               <a href="https://github.com/sulla-ai/sulla-desktop">
                 Sulla Desktop
               </a>
-              <a href="https://github.com/merchantprotocol/protocol">
-                Protocol CI/CD
-              </a>
-              <a href="https://github.com/merchantprotocol/docker-nginx-php8.2-ffmpeg">
-                Docker Containers
-              </a>
-              <a href="https://github.com/merchantprotocol/launchpad">
-                Launchpad
-              </a>
-              <a href="https://github.com/merchantprotocol/ConsentGuard">
-                ConsentGuard
-              </a>
             </div>
           </div>
 
-          {/* Company */}
+          {/* Resources */}
           <div className="mp-footer__col">
-            <div className="mp-footer__col-title">Company</div>
+            <div className="mp-footer__col-title">Resources</div>
             <div className="mp-footer__col-links">
-              <a href="https://merchantprotocol.com/about/">About</a>
-              <a href="https://merchantprotocol.com/#feature-article">
-                How We Work
+              <a href="/getting-started">Getting Started</a>
+              <a href="/installation_and_setup/first-time-installation-guide">
+                Installation
               </a>
-              <a href="https://merchantprotocol.com/get-started/">
-                Get Started
+              <a href="/ai_configuration/choosing-ai-models">
+                AI Configuration
               </a>
-              <a href="https://merchantprotocol.com/book-a-meeting/">
-                Book a Meeting
-              </a>
-              <a href="mailto:info@merchantprotocol.com">Contact</a>
+              <a href="/extensions">Extensions</a>
             </div>
           </div>
 
-          {/* Legal */}
+          {/* Community */}
           <div className="mp-footer__col">
-            <div className="mp-footer__col-title">Legal</div>
+            <div className="mp-footer__col-title">Community</div>
             <div className="mp-footer__col-links">
-              <a href="https://merchantprotocol.com/privacy-policy/">
-                Privacy Policy
+              <a href="https://github.com/sulla-ai/sulla-desktop">GitHub</a>
+              <a href="https://github.com/sulla-ai/sulla-desktop/discussions">
+                Discussions
               </a>
-              <a href="https://merchantprotocol.com/terms-and-conditions/">
-                Terms &amp; Conditions
-              </a>
-              <a href="https://merchantprotocol.com/do-not-sell/">
-                Do Not Sell My Info
-              </a>
-              <a href="https://merchantprotocol.com/privacy-center/">
-                Privacy Center
+              <a href="https://github.com/sulla-ai/sulla-desktop/issues">
+                Issues
               </a>
             </div>
           </div>
@@ -115,12 +83,10 @@ function Footer() {
             <div className="mp-footer__col-title">Connect</div>
             <div className="mp-footer__col-connect">
               <a
-                href="mailto:info@merchantprotocol.com"
+                href="mailto:info@sulladesktop.com"
                 className="mp-footer__email">
-                info@merchantprotocol.com
+                info@sulladesktop.com
               </a>
-              <br />
-              Coeur d&rsquo;Alene, ID
             </div>
           </div>
         </div>
@@ -128,10 +94,9 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="mp-footer__bottom">
           <div className="mp-footer__copyright">
-            &copy; 2008&ndash;{currentYear} Merchant Protocol LLC. All rights
-            reserved.
+            &copy; {currentYear} Sulla AI. All rights reserved.
           </div>
-          <div className="mp-footer__built">Built with zero dependencies</div>
+          <div className="mp-footer__built">Built with Docusaurus</div>
         </div>
       </div>
     </footer>

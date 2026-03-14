@@ -90,7 +90,7 @@ function HeroSvg() {
           fontSize="10"
           fontFamily="monospace"
           opacity="0.9">
-          $ protocol deploy:push
+          $ brew install --cask sulla-desktop
         </text>
         <text
           x="12"

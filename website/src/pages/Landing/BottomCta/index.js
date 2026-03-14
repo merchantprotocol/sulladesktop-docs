@@ -60,7 +60,7 @@ export default function BottomCta() {
               textTransform: 'uppercase',
               color: '#6e7681',
             }}>
-            READY TO DEPLOY
+            READY TO START
           </span>
           <span
             style={{
@@ -82,7 +82,7 @@ export default function BottomCta() {
             color: '#e6edf3',
             marginBottom: 24,
           }}>
-          Your infrastructure is waiting.
+          Your AI desktop is waiting.
         </h2>
 
         {/* Body */}
@@ -95,9 +95,9 @@ export default function BottomCta() {
             maxWidth: 600,
             margin: '0 auto 40px',
           }}>
-          One command connects your servers to your repository. Every node
-          pulls, builds, and serves autonomously. No orchestrators. No middle
-          layers. Just your code, running everywhere.
+          One command gives you a local AI assistant, Docker containers,
+          workflow automation, and local LLM support. No cloud accounts. No
+          subscriptions. Just install and go.
         </p>
 
         {/* Buttons */}
@@ -172,9 +172,9 @@ export default function BottomCta() {
             flexWrap: 'wrap',
           }}>
           {[
-            {value: '20+', label: 'nodes'},
-            {value: '< 60s', label: 'deploy'},
-            {value: 'Zero', label: 'downtime'},
+            {value: '3', label: 'platforms'},
+            {value: '1-Click', label: 'install'},
+            {value: '100%', label: 'private'},
           ].map((stat, i) => (
             <span
               key={i}

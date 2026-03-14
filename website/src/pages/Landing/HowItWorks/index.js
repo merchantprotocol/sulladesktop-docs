@@ -4,22 +4,22 @@ export default function HowItWorks() {
   const items = [
     {
       step: '01',
-      title: 'Install Protocol',
-      desc: 'One command installs the CLI on any Linux or macOS machine. No root required, no dependencies to chase.',
-      href: '/installation',
+      title: 'Install Sulla Desktop',
+      desc: 'One Homebrew command installs everything you need. Run brew install --cask sulla-desktop on macOS, Windows, or Linux.',
+      href: '/installation_and_setup/first-time-installation-guide',
       linkText: 'Installation docs',
     },
     {
       step: '02',
-      title: 'Connect Your Repo',
-      desc: 'Point Protocol at your Git repository and configure your deployment targets. Secrets are encrypted at rest.',
-      href: '/configuration',
-      linkText: 'Configuration guide',
+      title: 'Configure Your AI',
+      desc: 'Set up your preferred AI model — Grok, Claude, or local LLMs. Sulla Desktop connects to the models you choose.',
+      href: '/ai_configuration/choosing-ai-models',
+      linkText: 'AI configuration guide',
     },
     {
       step: '03',
-      title: 'Deploy Everywhere',
-      desc: 'Push once. Every node pulls, builds, and starts serving traffic autonomously. Zero human intervention.',
+      title: 'Automate Everything',
+      desc: 'Create workflows with n8n, manage Docker containers, and let your AI assistant handle the rest. All from one app.',
       href: '/getting-started',
       linkText: 'Full walkthrough',
     },
@@ -103,7 +103,7 @@ export default function HowItWorks() {
             lineHeight: 1.1,
             marginBottom: 16,
           }}>
-          Three steps to production
+          Three steps to get started
         </h2>
 
         {/* Subtitle */}
@@ -117,8 +117,8 @@ export default function HowItWorks() {
             maxWidth: 540,
             margin: '0 auto 56px auto',
           }}>
-          From install to live traffic in under sixty seconds. No CI servers, no
-          deploy queues.
+          From install to a fully running AI desktop environment in under sixty
+          seconds. No complex setup required.
         </p>
 
         {/* Cards */}

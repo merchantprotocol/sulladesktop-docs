@@ -3,23 +3,23 @@ import React, {useState} from 'react';
 const features = [
   {
     num: '01',
-    title: 'SOC 2 Ready',
-    desc: 'Audit trails, encrypted secrets, and role-based access controls built into the deployment pipeline from day one.',
+    title: 'Your Data Stays Local',
+    desc: 'Run AI models directly on your machine. Your conversations, files, and data never leave your desktop unless you choose to share them.',
   },
   {
     num: '02',
-    title: 'Secrets Encrypted at Rest',
-    desc: 'Environment variables and credentials are AES-256 encrypted. They never touch disk in plaintext.',
+    title: 'Local LLM Support',
+    desc: 'Use open-source models like Llama, Mistral, or Phi locally. No API keys needed, no usage limits, complete offline capability.',
   },
   {
     num: '03',
-    title: 'Full Audit Trail',
-    desc: 'Every deployment, rollback, and configuration change is logged with timestamps, user identity, and diff context.',
+    title: 'No Cloud Dependencies',
+    desc: 'Sulla Desktop runs entirely on your hardware. No accounts, no telemetry, no third-party services required for core functionality.',
   },
   {
     num: '04',
-    title: 'No Third-Party CI',
-    desc: 'Your code never leaves your infrastructure. No external build servers, no shared runners, no supply-chain risk.',
+    title: 'Sandboxed Containers',
+    desc: 'Every service runs in isolated Docker containers. Your development environment is completely separated from your host system.',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function SecurityCompliance() {
               textTransform: 'uppercase',
               color: '#6e7681',
             }}>
-            Security &amp; Compliance
+            Privacy &amp; Security
           </span>
           <span
             style={{
@@ -90,9 +90,9 @@ export default function SecurityCompliance() {
                 lineHeight: 1.0,
                 marginBottom: 24,
               }}>
-              SOC 2 ready
+              Private by design,
               <br />
-              <span style={{color: '#3fb950'}}>out of the box</span>
+              <span style={{color: '#3fb950'}}>secure by default</span>
             </h2>
 
             <p
@@ -104,8 +104,8 @@ export default function SecurityCompliance() {
                 marginBottom: 40,
                 maxWidth: 400,
               }}>
-              Your deployments stay inside your infrastructure. No shared
-              runners, no third-party access, no compliance gaps.
+              Your AI, your data, your machine. Sulla Desktop keeps everything
+              local — no cloud required, no data leaks.
             </p>
 
             {/* Shield graphic */}

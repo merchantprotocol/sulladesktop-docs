@@ -1,11 +1,11 @@
-const copyright = `Copyright © ${new Date().getFullYear()} Merchant Protocol, LLC.`;
+const copyright = `Copyright © ${new Date().getFullYear()} Sulla AI.`;
 
 const commonDocsOptions = {
   breadcrumbs: true,
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   editUrl:
-    'https://github.com/merchantprotocol/protocol-docs/blob/main/website/',
+    'https://github.com/sulla-ai/sulla-desktop/blob/main/sulladesktop-docs/website/',
   remarkPlugins: [],
 };
 
@@ -13,12 +13,11 @@ const isDeployPreview = process.env.PREVIEW_DEPLOY === 'true';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Protocol Documentation',
-  tagline:
-    'Continuous deployment and configuration management for PHP applications.',
-  organizationName: 'merchantprotocol',
-  projectName: 'protocol-docs',
-  url: 'https://protocol.merchantprotocol.com',
+  title: 'Sulla Desktop Documentation',
+  tagline: 'AI-powered desktop app with Docker, automation, and local LLMs.',
+  organizationName: 'sulla-ai',
+  projectName: 'sulla-desktop',
+  url: 'https://sulladesktop.com',
   baseUrl: '/',
   clientModules: [
     require.resolve('./modules/jumpToFragment.js'),
@@ -93,10 +92,10 @@ module.exports = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'PROTOCOL',
+        title: 'SULLA DESKTOP',
         logo: {
           src: 'img/terminal-icon.svg',
-          alt: 'Protocol',
+          alt: 'Sulla Desktop',
         },
         style: 'dark',
         items: [
@@ -114,55 +113,51 @@ module.exports = {
               {
                 label: 'Installation',
                 type: 'doc',
-                docId: 'installation',
+                docId: 'installation_and_setup/first-time-installation-guide',
               },
               {
-                label: 'Configuration',
+                label: 'AI Configuration',
                 type: 'doc',
-                docId: 'configuration',
+                docId: 'ai_configuration/choosing-ai-models',
               },
               {
-                label: 'Commands',
+                label: 'Docker & Development',
                 type: 'doc',
-                docId: 'commands',
+                docId: 'docker_and_development/docker-desktop-integration',
               },
               {
-                label: 'Secrets Management',
+                label: 'Extensions',
                 type: 'doc',
-                docId: 'secrets',
+                docId: 'extensions/index',
               },
             ],
           },
           {
-            label: 'Operations',
+            label: 'Develop',
             type: 'dropdown',
             position: 'right',
             items: [
               {
-                label: 'Deployment Strategies',
+                label: 'API Reference',
                 type: 'doc',
-                docId: 'deployment-types',
+                docId: 'api/command-server',
               },
               {
-                label: 'Shadow Deployment',
+                label: 'Workflows',
                 type: 'doc',
-                docId: 'blue-green',
+                docId:
+                  'automation_and_workflows/creating-your-first-n8n-workflow',
               },
               {
-                label: 'Deployment SOPs',
+                label: 'Development',
                 type: 'doc',
-                docId: 'deployment-sops',
-              },
-              {
-                label: 'Incident Response',
-                type: 'doc',
-                docId: 'incident-response',
+                docId: 'development/features',
               },
             ],
           },
           {
-            href: 'https://github.com/merchantprotocol/protocol',
-            label: 'merchantprotocol/protocol',
+            href: 'https://github.com/sulla-ai/sulla-desktop',
+            label: 'sulla-ai/sulla-desktop',
             position: 'right',
             className: 'navbar-github-link',
           },
@@ -172,7 +167,7 @@ module.exports = {
       footer: {
         logo: {
           src: 'img/terminal-icon.svg',
-          alt: 'Protocol',
+          alt: 'Sulla Desktop',
           width: 24,
           height: 24,
         },
@@ -187,32 +182,32 @@ module.exports = {
               },
               {
                 label: 'Installation',
-                to: '/installation',
+                to: '/installation_and_setup/first-time-installation-guide',
               },
               {
-                label: 'Commands',
-                to: '/commands',
+                label: 'AI Configuration',
+                to: '/ai_configuration/choosing-ai-models',
               },
               {
-                label: 'Configuration',
-                to: '/configuration',
+                label: 'Extensions',
+                to: '/extensions',
               },
             ],
           },
           {
-            title: 'Operations',
+            title: 'Develop',
             items: [
               {
-                label: 'Deployment Strategies',
-                to: '/deployment-types',
+                label: 'API Reference',
+                to: '/api/command-server',
               },
               {
-                label: 'Secrets Management',
-                to: '/secrets',
+                label: 'Docker & Development',
+                to: '/docker_and_development/docker-desktop-integration',
               },
               {
-                label: 'Security & SOC 2',
-                to: '/security',
+                label: 'Workflows',
+                to: '/automation_and_workflows/creating-your-first-n8n-workflow',
               },
             ],
           },
@@ -221,11 +216,11 @@ module.exports = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/merchantprotocol/protocol',
+                href: 'https://github.com/sulla-ai/sulla-desktop',
               },
               {
                 label: 'Discussions',
-                href: 'https://github.com/merchantprotocol/protocol/discussions',
+                href: 'https://github.com/sulla-ai/sulla-desktop/discussions',
               },
             ],
           },

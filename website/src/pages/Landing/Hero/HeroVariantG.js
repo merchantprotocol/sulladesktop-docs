@@ -10,7 +10,7 @@ import React, {useState, useEffect, useRef} from 'react';
  * The central terminal drives the animation; corner nodes react.
  */
 
-const NODE_NAMES = ['node-01', 'node-02', 'node-03', 'node-04'];
+const NODE_NAMES = ['ai-assistant', 'containers', 'workflows', 'local-llm'];
 const SELF_HEAL_NODE = 2;
 const NODE_DELAYS = [0, 300, 600, 200];
 
@@ -158,12 +158,19 @@ function MiniTerminal({name, lines, statusColor, opacity, style, className}) {
 
 function getNodeLines(phase, nodeIndex) {
   const isSelfHeal = nodeIndex === SELF_HEAL_NODE;
+  const nodeCommands = [
+    '$ sulla ai chat',
+    '$ sulla containers ls',
+    '$ sulla workflows run',
+    '$ sulla llm start',
+  ];
+  const cmd = nodeCommands[nodeIndex] || '$ sulla status';
   switch (phase) {
     case 'listening':
       return {
         lines: [
-          {text: '$ protocol listen', color: '#3fb950'},
-          {text: '  Waiting for deployments...', color: '#6e7681'},
+          {text: cmd, color: '#3fb950'},
+          {text: '  Initializing service...', color: '#6e7681'},
           {text: '  █', color: '#3fb950'},
         ],
         statusColor: '#30363d',
@@ -171,17 +178,17 @@ function getNodeLines(phase, nodeIndex) {
     case 'detected':
       return {
         lines: [
-          {text: '$ protocol listen', color: '#3fb950'},
-          {text: '  ● New deployment detected', color: '#56d364'},
-          {text: '  Pulling v1.2.4...', color: '#8b949e'},
+          {text: cmd, color: '#3fb950'},
+          {text: '  ● Service starting', color: '#56d364'},
+          {text: '  Loading configuration...', color: '#8b949e'},
         ],
         statusColor: '#3fb950',
       };
     case 'pulling':
       return {
         lines: [
-          {text: '  ● Pulling v1.2.4...', color: '#56d364'},
-          {text: '  Downloading artifacts...', color: '#8b949e'},
+          {text: '  ● Loading models...', color: '#56d364'},
+          {text: '  Downloading assets...', color: '#8b949e'},
           {text: '  ████████░░░░ 67%', color: '#3fb950'},
         ],
         statusColor: '#3fb950',
@@ -190,9 +197,9 @@ function getNodeLines(phase, nodeIndex) {
       if (isSelfHeal) {
         return {
           lines: [
-            {text: '  ✗ Health check failed', color: '#f85149'},
-            {text: '  Self-healing...', color: '#e3b341'},
-            {text: '  Retrying deployment...', color: '#8b949e'},
+            {text: '  ✗ Connection timeout', color: '#f85149'},
+            {text: '  Auto-recovering...', color: '#e3b341'},
+            {text: '  Restarting service...', color: '#8b949e'},
           ],
           statusColor: '#f85149',
         };
@@ -201,16 +208,16 @@ function getNodeLines(phase, nodeIndex) {
         lines: [
           {text: '  ████████████ 100%', color: '#3fb950'},
           {text: '  Running health checks...', color: '#8b949e'},
-          {text: '  ✓ HTTP 200 OK', color: '#56d364'},
+          {text: '  ✓ Service healthy', color: '#56d364'},
         ],
         statusColor: '#3fb950',
       };
     case 'healed':
       return {
         lines: [
-          {text: '  ✓ Self-healed successfully', color: '#56d364'},
+          {text: '  ✓ Auto-recovered', color: '#56d364'},
           {text: '  ✓ Health check passed', color: '#56d364'},
-          {text: '  ✓ Deployment complete', color: '#3fb950'},
+          {text: '  ✓ Service running', color: '#3fb950'},
         ],
         statusColor: '#3fb950',
       };
@@ -218,7 +225,7 @@ function getNodeLines(phase, nodeIndex) {
       return {
         lines: [
           {text: '  ✓ Health check passed', color: '#56d364'},
-          {text: '  ✓ Deployment complete', color: '#3fb950'},
+          {text: '  ✓ All services ready', color: '#3fb950'},
           {text: '  Listening...', color: '#6e7681'},
         ],
         statusColor: '#3fb950',
@@ -226,8 +233,8 @@ function getNodeLines(phase, nodeIndex) {
     default:
       return {
         lines: [
-          {text: '$ protocol listen', color: '#3fb950'},
-          {text: '  Waiting for deployments...', color: '#6e7681'},
+          {text: cmd, color: '#3fb950'},
+          {text: '  Waiting for input...', color: '#6e7681'},
         ],
         statusColor: '#30363d',
       };
@@ -240,42 +247,46 @@ function getCentralLines(phase) {
   switch (phase) {
     case 'listening':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#6e7681', opacity: 0.5},
+        {
+          text: '$ brew install --cask sulla-desktop',
+          color: '#6e7681',
+          opacity: 0.5,
+        },
       ];
     case 'deploying':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'},
-        {text: '  Deploying v1.2.4 to fleet...', color: '#8b949e'},
-        {text: '  4 nodes listening', color: '#8b949e'},
+        {text: '$ brew install --cask sulla-desktop', color: '#3fb950'},
+        {text: '  Starting Sulla Desktop...', color: '#8b949e'},
+        {text: '  4 services initializing', color: '#8b949e'},
       ];
     case 'detected':
     case 'pulling':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'},
-        {text: '  Deploying v1.2.4 to fleet...', color: '#8b949e'},
-        {text: '  4 nodes pulling...', color: '#e3b341'},
+        {text: '$ brew install --cask sulla-desktop', color: '#3fb950'},
+        {text: '  Configuring environment...', color: '#8b949e'},
+        {text: '  4 services loading...', color: '#e3b341'},
       ];
     case 'healthCheck':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'},
-        {text: '  3/4 nodes healthy', color: '#8b949e'},
-        {text: '  1 node self-healing...', color: '#e3b341'},
+        {text: '$ sulla start', color: '#3fb950'},
+        {text: '  3/4 services healthy', color: '#8b949e'},
+        {text: '  1 service recovering...', color: '#e3b341'},
       ];
     case 'healed':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'},
-        {text: '  4/4 nodes healthy', color: '#56d364'},
-        {text: '  Confirming rollback points...', color: '#8b949e'},
+        {text: '$ sulla start', color: '#3fb950'},
+        {text: '  4/4 services healthy', color: '#56d364'},
+        {text: '  Finalizing setup...', color: '#8b949e'},
       ];
     case 'complete':
       return [
-        {text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'},
-        {text: '  ✓ 4/4 nodes deployed (14.2s)', color: '#56d364'},
-        {text: '  ✓ All health checks passed', color: '#56d364'},
-        {text: '  ✓ Rollback points saved', color: '#56d364'},
+        {text: '$ sulla start', color: '#3fb950'},
+        {text: '  ✓ AI assistant ready', color: '#56d364'},
+        {text: '  ✓ Containers running', color: '#56d364'},
+        {text: '  ✓ All services online (8.3s)', color: '#56d364'},
       ];
     default:
-      return [{text: "$ protocol deploy 'v1.2.4'", color: '#3fb950'}];
+      return [{text: '$ brew install --cask sulla-desktop', color: '#3fb950'}];
   }
 }
 
@@ -525,7 +536,7 @@ function HeroVariantG() {
             marginBottom: '1.5rem',
             zIndex: 2,
           }}>
-          Protocol Deployment Engine
+          Sulla Desktop
         </div>
 
         <h1
@@ -541,14 +552,14 @@ function HeroVariantG() {
             margin: '0 0 1rem',
             zIndex: 2,
           }}>
-          Lightweight CI/CD
+          Your AI-Powered
           <br />
           <span
             style={{
               color: '#3fb950',
               fontStyle: 'italic',
             }}>
-            That's More Than A Pipeline.
+            Desktop Environment.
           </span>
         </h1>
 
@@ -563,8 +574,8 @@ function HeroVariantG() {
             margin: '0 0 2.5rem',
             zIndex: 2,
           }}>
-          Every node listens. One deploy command, and your entire fleet pulls
-          the update autonomously. Self-healing. Zero downtime.
+          A local AI assistant, Docker containers, workflow automation, and
+          local LLM support — all in one app. macOS, Windows, and Linux.
         </p>
 
         {/* ── Central terminal ── */}
@@ -633,7 +644,7 @@ function HeroVariantG() {
                   marginLeft: 'auto',
                   letterSpacing: '0.05em',
                 }}>
-                protocol — deploy
+                sulla — desktop
               </span>
             </div>
             <div
@@ -690,19 +701,19 @@ function HeroVariantG() {
                   : '#3fb950';
               const label =
                 p === 'listening'
-                  ? 'listening'
+                  ? 'starting'
                   : p === 'detected'
-                  ? 'detected'
+                  ? 'loading'
                   : p === 'pulling'
-                  ? 'pulling'
+                  ? 'installing'
                   : p === 'healthCheck' && i === SELF_HEAL_NODE
-                  ? 'healing'
+                  ? 'recovering'
                   : p === 'healthCheck'
                   ? 'checking'
                   : p === 'healed'
-                  ? 'healed'
+                  ? 'recovered'
                   : p === 'complete'
-                  ? 'deployed'
+                  ? 'running'
                   : 'idle';
               return (
                 <div
@@ -837,7 +848,7 @@ function HeroVariantG() {
                 color: '#3fb950',
                 lineHeight: 1,
               }}>
-              20+
+              3
             </div>
             <div
               style={{
@@ -848,7 +859,7 @@ function HeroVariantG() {
                 letterSpacing: '0.15em',
                 marginTop: '0.5rem',
               }}>
-              Nodes Managed
+              Platforms
             </div>
           </div>
           <div style={{textAlign: 'center'}}>
@@ -860,7 +871,7 @@ function HeroVariantG() {
                 color: '#3fb950',
                 lineHeight: 1,
               }}>
-              &lt;60s
+              100%
             </div>
             <div
               style={{
@@ -871,7 +882,7 @@ function HeroVariantG() {
                 letterSpacing: '0.15em',
                 marginTop: '0.5rem',
               }}>
-              Deploy Time
+              Local & Private
             </div>
           </div>
           <div style={{textAlign: 'center'}}>
@@ -883,7 +894,7 @@ function HeroVariantG() {
                 color: '#3fb950',
                 lineHeight: 1,
               }}>
-              0
+              1-Click
             </div>
             <div
               style={{
@@ -894,7 +905,7 @@ function HeroVariantG() {
                 letterSpacing: '0.15em',
                 marginTop: '0.5rem',
               }}>
-              Downtime
+              Install
             </div>
           </div>
         </div>

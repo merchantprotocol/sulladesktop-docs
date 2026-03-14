@@ -213,7 +213,7 @@ const styles = {
 
 function HeroVariantB() {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'curl -sSL https://merchantprotocol.com/install | bash';
+  const installCmd = 'brew install --cask sulla-desktop';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);
@@ -249,13 +249,13 @@ function HeroVariantB() {
           <div style={styles.left}>
             <div style={styles.volume}>
               <span style={styles.volumeDot} />
-              <span>Protocol CLI · v1.2.0</span>
+              <span>Sulla Desktop</span>
             </div>
 
             <h2 style={styles.headline}>
-              Install Once.
+              AI + Docker +
               <br />
-              <span style={styles.headlineItalic}>Run Everywhere.</span>
+              <span style={styles.headlineItalic}>Automation in One App.</span>
             </h2>
 
             <div style={styles.greenRule} />
@@ -263,13 +263,13 @@ function HeroVariantB() {
 
           <div className="heroB-right" style={styles.right}>
             <div className="heroB-pullquote" style={styles.pullQuote}>
-              &ldquo;Paste this into any server terminal and Protocol handles
-              the rest.&rdquo;
+              &ldquo;One install gives you a local AI assistant, containers, and
+              workflow automation — right on your desktop.&rdquo;
             </div>
 
             <p style={styles.body}>
-              Detection, installation, and configuration — all automated. One
-              curl command gets you up and running on any supported platform.
+              Sulla Desktop brings AI, Docker, n8n workflows, and local LLM
+              support together. Install with Homebrew and start building.
             </p>
 
             {/* Terminal with copy-to-clipboard */}
@@ -328,7 +328,7 @@ function HeroVariantB() {
             </div>
 
             <div className="heroB-badges" style={styles.badges}>
-              {['Linux', 'macOS', 'Docker', 'WSL'].map(platform => (
+              {['macOS', 'Windows', 'Linux'].map(platform => (
                 <span key={platform} style={styles.badge}>
                   {platform}
                 </span>
