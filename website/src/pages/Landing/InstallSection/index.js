@@ -28,7 +28,7 @@ export default function InstallSection() {
           height: '100%',
           transform: 'translate(-50%, -50%)',
           background:
-            'radial-gradient(circle, rgba(46,160,67,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -53,7 +53,7 @@ export default function InstallSection() {
             style={{
               flex: '0 1 60px',
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #3fb950)',
+              background: 'linear-gradient(90deg, transparent, #5096b3)',
             }}
           />
           <span
@@ -70,7 +70,7 @@ export default function InstallSection() {
             style={{
               flex: '0 1 60px',
               height: 1,
-              background: 'linear-gradient(90deg, #3fb950, transparent)',
+              background: 'linear-gradient(90deg, #5096b3, transparent)',
             }}
           />
         </div>
@@ -176,7 +176,7 @@ export default function InstallSection() {
               onMouseEnter={e => {
                 e.currentTarget.style.opacity = '1';
                 e.currentTarget.style.filter =
-                  'drop-shadow(0 0 6px rgba(46,160,67,0.6))';
+                  'drop-shadow(0 0 6px rgba(80,150,179,0.6))';
               }}
               onMouseLeave={e => {
                 if (!copied) {
@@ -190,7 +190,7 @@ export default function InstallSection() {
                   height="16"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -222,7 +222,7 @@ export default function InstallSection() {
               lineHeight: 1.6,
             }}>
             <code>
-              <span style={{color: '#3fb950'}}>$</span> {installCmd}
+              <span style={{color: '#5096b3'}}>$</span> {installCmd}
             </code>
           </div>
         </div>

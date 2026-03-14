@@ -34,7 +34,7 @@ const responsiveStyle = `
     .heroB-pullquote {
       border-left: none !important;
       padding-left: 0 !important;
-      border-top: 3px solid #3fb950;
+      border-top: 3px solid #5096b3;
       padding-top: 1.5rem;
     }
     .heroB-cta {
@@ -61,8 +61,8 @@ const styles = {
     right: 0,
     bottom: 0,
     backgroundImage: `
-      linear-gradient(rgba(63,185,80,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(63,185,80,0.03) 1px, transparent 1px)
+      linear-gradient(rgba(80,150,179,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(80,150,179,0.03) 1px, transparent 1px)
     `,
     backgroundSize: '80px 80px',
     pointerEvents: 'none',
@@ -96,8 +96,8 @@ const styles = {
     width: '6px',
     height: '6px',
     borderRadius: '50%',
-    background: '#3fb950',
-    boxShadow: '0 0 8px rgba(63, 185, 80, 0.6)',
+    background: '#5096b3',
+    boxShadow: '0 0 8px rgba(80, 150, 179, 0.6)',
     animation: 'heroBPulse 2s ease-in-out infinite',
   },
   headline: {
@@ -111,14 +111,14 @@ const styles = {
   },
   headlineItalic: {
     fontStyle: 'italic',
-    color: '#3fb950',
+    color: '#5096b3',
     display: 'block',
-    textShadow: '0 0 60px rgba(63, 185, 80, 0.3)',
+    textShadow: '0 0 60px rgba(80, 150, 179, 0.3)',
   },
   greenRule: {
     height: '3px',
-    background: '#3fb950',
-    boxShadow: '0 0 12px rgba(46, 160, 67, 0.4)',
+    background: '#5096b3',
+    boxShadow: '0 0 12px rgba(80, 150, 179, 0.4)',
     margin: '2.5rem 0 0',
     animation: 'heroBLineGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards',
     width: 0,
@@ -131,7 +131,7 @@ const styles = {
     fontSize: '1.35rem',
     lineHeight: 1.5,
     color: '#e6edf3',
-    borderLeft: '3px solid #3fb950',
+    borderLeft: '3px solid #5096b3',
     paddingLeft: '1.5rem',
     marginBottom: '1.5rem',
   },
@@ -193,7 +193,7 @@ const styles = {
     lineHeight: 1.6,
   },
   prompt: {
-    color: '#3fb950',
+    color: '#5096b3',
   },
   badges: {
     display: 'flex',
@@ -240,7 +240,7 @@ function HeroVariantB() {
             height: '900px',
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(46,160,67,0.1) 0%, rgba(46,160,67,0.04) 35%, transparent 65%)',
+              'radial-gradient(circle, rgba(80,150,179,0.1) 0%, rgba(80,150,179,0.04) 35%, transparent 65%)',
             pointerEvents: 'none',
           }}
         />
@@ -286,7 +286,7 @@ function HeroVariantB() {
                   onMouseEnter={e => {
                     e.currentTarget.style.opacity = '1';
                     e.currentTarget.style.filter =
-                      'drop-shadow(0 0 6px rgba(46,160,67,0.6))';
+                      'drop-shadow(0 0 6px rgba(80,150,179,0.6))';
                   }}
                   onMouseLeave={e => {
                     if (!copied) e.currentTarget.style.opacity = '0.4';
@@ -298,7 +298,7 @@ function HeroVariantB() {
                       height="16"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#3fb950"
+                      stroke="#5096b3"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round">

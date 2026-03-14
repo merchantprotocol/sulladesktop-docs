@@ -1,6 +1,6 @@
 /**
  * Merchant Protocol - Terminal-inspired Prism theme
- * Dark background with green accent coding colors
+ * Dark background with steel blue accent coding colors
  */
 
 const theme = {
@@ -12,7 +12,7 @@ const theme = {
     {
       types: ['property'],
       style: {
-        color: '#7ee787',
+        color: '#88c3d9',
       },
     },
     {
@@ -42,13 +42,13 @@ const theme = {
     {
       types: ['entity'],
       style: {
-        color: '#7ee787',
+        color: '#88c3d9',
       },
     },
     {
       types: ['atrule', 'inserted'],
       style: {
-        color: '#3FB950',
+        color: '#5096B3',
       },
     },
     {
@@ -114,7 +114,7 @@ const theme = {
     {
       types: ['operator', 'tag'],
       style: {
-        color: '#7ee787',
+        color: '#88c3d9',
       },
     },
   ],

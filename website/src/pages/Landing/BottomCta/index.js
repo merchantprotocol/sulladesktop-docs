@@ -24,7 +24,7 @@ export default function BottomCta() {
           width: '80%',
           height: '80%',
           background:
-            'radial-gradient(circle, rgba(46,160,67,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -49,7 +49,7 @@ export default function BottomCta() {
               display: 'inline-block',
               width: 40,
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #3fb950)',
+              background: 'linear-gradient(90deg, transparent, #5096b3)',
             }}
           />
           <span
@@ -67,7 +67,7 @@ export default function BottomCta() {
               display: 'inline-block',
               width: 40,
               height: 1,
-              background: 'linear-gradient(90deg, #3fb950, transparent)',
+              background: 'linear-gradient(90deg, #5096b3, transparent)',
             }}
           />
         </div>
@@ -117,7 +117,7 @@ export default function BottomCta() {
               alignItems: 'center',
               gap: 8,
               padding: '14px 32px',
-              background: '#2EA043',
+              background: '#4485a0',
               color: '#ffffff',
               fontFamily: "'JetBrains Mono', 'Courier New', monospace",
               fontSize: '0.85rem',
@@ -157,7 +157,7 @@ export default function BottomCta() {
           style={{
             height: 1,
             background:
-              'linear-gradient(90deg, transparent, #3fb950 20%, #3fb950 80%, transparent)',
+              'linear-gradient(90deg, transparent, #5096b3 20%, #5096b3 80%, transparent)',
             opacity: 0.3,
             marginBottom: 32,
           }}
@@ -183,7 +183,7 @@ export default function BottomCta() {
                 fontSize: '0.8rem',
                 color: '#8b949e',
               }}>
-              <span style={{color: '#3fb950', fontWeight: 700}}>
+              <span style={{color: '#5096b3', fontWeight: 700}}>
                 {stat.value}
               </span>{' '}
               {stat.label}

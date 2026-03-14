@@ -25,8 +25,8 @@ const keyframes = `
   100% { height: 120px; }
 }
 @keyframes opt2GlowPulse {
-  0%, 100% { box-shadow: 0 0 15px rgba(63,185,80,0.3); }
-  50% { box-shadow: 0 0 30px rgba(63,185,80,0.5); }
+  0%, 100% { box-shadow: 0 0 15px rgba(80,150,179,0.3); }
+  50% { box-shadow: 0 0 30px rgba(80,150,179,0.5); }
 }
 @keyframes heroChatDot {
   0%, 80%, 100% { opacity: 0.4; transform: scale(1); }
@@ -39,13 +39,13 @@ const keyframes = `
 .opt2-cta-primary:hover {
   color: #fff !important;
   text-decoration: none !important;
-  background: #3fb950 !important;
-  box-shadow: 0 0 24px rgba(63,185,80,0.4) !important;
+  background: #5096b3 !important;
+  box-shadow: 0 0 24px rgba(80,150,179,0.4) !important;
   transform: translateY(-2px) !important;
 }
 .opt2-cta-outline:hover {
-  border-color: #3fb950 !important;
-  color: #3fb950 !important;
+  border-color: #5096b3 !important;
+  color: #5096b3 !important;
   transform: translateY(-2px) !important;
 }
 @media (max-width: 900px) {
@@ -76,13 +76,13 @@ function SullaLogo({size = 14}) {
         height="23"
         rx="3"
         ry="3"
-        stroke="#3FB950"
+        stroke="#5096B3"
         strokeWidth="2.5"
         fill="none"
       />
       <polyline
         points="9,13 14,17 9,21"
-        stroke="#3FB950"
+        stroke="#5096B3"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -93,7 +93,7 @@ function SullaLogo({size = 14}) {
         y1="21"
         x2="23"
         y2="21"
-        stroke="#3FB950"
+        stroke="#5096B3"
         strokeWidth="2.5"
         strokeLinecap="round"
       />
@@ -183,8 +183,8 @@ function HeroOption2() {
             position: 'absolute',
             inset: 0,
             backgroundImage: `
-              linear-gradient(rgba(63,185,80,0.025) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(63,185,80,0.025) 1px, transparent 1px)
+              linear-gradient(rgba(80,150,179,0.025) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(80,150,179,0.025) 1px, transparent 1px)
             `,
             backgroundSize: '80px 80px',
             pointerEvents: 'none',
@@ -202,7 +202,7 @@ function HeroOption2() {
             height: '800px',
             borderRadius: '50%',
             background:
-              'radial-gradient(ellipse, rgba(46,160,67,0.1) 0%, transparent 60%)',
+              'radial-gradient(ellipse, rgba(80,150,179,0.1) 0%, transparent 60%)',
             pointerEvents: 'none',
           }}
         />
@@ -245,8 +245,8 @@ function HeroOption2() {
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
-                  background: '#3fb950',
-                  boxShadow: '0 0 10px rgba(63,185,80,0.5)',
+                  background: '#5096b3',
+                  boxShadow: '0 0 10px rgba(80,150,179,0.5)',
                 }}
               />
               Sulla Desktop
@@ -267,9 +267,9 @@ function HeroOption2() {
               <br />
               <em
                 style={{
-                  color: '#3fb950',
+                  color: '#5096b3',
                   fontStyle: 'italic',
-                  textShadow: '0 0 60px rgba(63,185,80,0.3)',
+                  textShadow: '0 0 60px rgba(80,150,179,0.3)',
                 }}>
                 Desktop App.
               </em>
@@ -321,7 +321,7 @@ function HeroOption2() {
                   alignItems: 'center',
                   gap: '8px',
                   padding: '14px 32px',
-                  background: '#2EA043',
+                  background: '#4485a0',
                   color: '#fff',
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: '0.85rem',
@@ -402,7 +402,7 @@ function HeroOption2() {
             style={{
               width: '2px',
               background:
-                'linear-gradient(to bottom, transparent, #3fb950, transparent)',
+                'linear-gradient(to bottom, transparent, #5096b3, transparent)',
               animation:
                 'opt2LineGrow 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both, opt2GlowPulse 3s ease-in-out infinite',
               alignSelf: 'stretch',
@@ -489,13 +489,13 @@ function HeroOption2() {
                     {phase === 0 && (
                       <>
                         <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
                           https://sulladesktop.com/install.sh | sh
                         </div>
                         <div style={{color: '#8b949e', marginBottom: '4px'}}>
                           Downloading Sulla Desktop...
                         </div>
-                        <div style={{color: '#3fb950'}}>
+                        <div style={{color: '#5096b3'}}>
                           ████████░░░░░░░░ 52%
                         </div>
                         <div
@@ -511,10 +511,10 @@ function HeroOption2() {
                     {phase === 1 && (
                       <>
                         <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
                           https://sulladesktop.com/install.sh | sh
                         </div>
-                        <div style={{color: '#56d364'}}>
+                        <div style={{color: '#6ab0cc'}}>
                           ✓ Download complete
                         </div>
                         <div style={{color: '#8b949e', marginTop: '8px'}}>
@@ -523,7 +523,7 @@ function HeroOption2() {
                         <div style={{color: '#8b949e', marginTop: '4px'}}>
                           Configuring AI engine...
                         </div>
-                        <div style={{color: '#3fb950', marginTop: '4px'}}>
+                        <div style={{color: '#5096b3', marginTop: '4px'}}>
                           ████████████░░░░ 75%
                         </div>
                       </>
@@ -531,21 +531,21 @@ function HeroOption2() {
                     {phase >= 2 && (
                       <>
                         <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
                           https://sulladesktop.com/install.sh | sh
                         </div>
-                        <div style={{color: '#56d364'}}>
+                        <div style={{color: '#6ab0cc'}}>
                           ✓ Download complete
                         </div>
-                        <div style={{color: '#56d364'}}>
+                        <div style={{color: '#6ab0cc'}}>
                           ✓ Installation complete
                         </div>
-                        <div style={{color: '#56d364'}}>
+                        <div style={{color: '#6ab0cc'}}>
                           ✓ AI engine configured
                         </div>
                         <div
                           style={{
-                            color: '#3fb950',
+                            color: '#5096b3',
                             marginTop: '12px',
                             fontWeight: 600,
                           }}>
@@ -576,11 +576,11 @@ function HeroOption2() {
                 <div
                   style={{
                     background: '#161b22',
-                    border: '1px solid rgba(63,185,80,0.3)',
+                    border: '1px solid rgba(80,150,179,0.3)',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     boxShadow:
-                      '0 16px 64px rgba(0,0,0,0.5), 0 0 30px rgba(46,160,67,0.08)',
+                      '0 16px 64px rgba(0,0,0,0.5), 0 0 30px rgba(80,150,179,0.08)',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
@@ -619,7 +619,7 @@ function HeroOption2() {
                         style={{
                           fontFamily: "'JetBrains Mono', monospace",
                           fontSize: '0.75rem',
-                          color: '#3fb950',
+                          color: '#5096b3',
                           letterSpacing: '0.05em',
                           fontWeight: 600,
                         }}>

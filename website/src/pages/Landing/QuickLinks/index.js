@@ -14,7 +14,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -60,7 +60,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -104,7 +104,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -146,7 +146,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -181,7 +181,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -226,7 +226,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">

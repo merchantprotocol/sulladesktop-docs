@@ -188,14 +188,14 @@ export default function HeroChatBox() {
             color: '#e6edf3',
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: '0.8rem',
-            caretColor: '#3fb950',
+            caretColor: '#5096b3',
           }}
         />
         <button
           type="submit"
           disabled={!input.trim() || typing}
           style={{
-            background: input.trim() && !typing ? '#2EA043' : '#21262d',
+            background: input.trim() && !typing ? '#4485a0' : '#21262d',
             border: 'none',
             borderRadius: '6px',
             padding: '6px 12px',
@@ -235,14 +235,14 @@ function AssistantMessage({msg}) {
           width: '32px',
           height: '32px',
           borderRadius: '8px',
-          background: 'rgba(63,185,80,0.12)',
-          border: '1px solid rgba(63,185,80,0.25)',
+          background: 'rgba(80,150,179,0.12)',
+          border: '1px solid rgba(80,150,179,0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
           marginTop: '2px',
-          color: '#3fb950',
+          color: '#5096b3',
           fontSize: '14px',
           fontWeight: 700,
         }}>
@@ -251,7 +251,7 @@ function AssistantMessage({msg}) {
       <div>
         <div
           style={{
-            color: '#3fb950',
+            color: '#5096b3',
             fontSize: '0.75rem',
             fontWeight: 600,
             marginBottom: '6px',
@@ -271,7 +271,7 @@ function AssistantMessage({msg}) {
                 display: 'inline-block',
                 width: '6px',
                 height: '14px',
-                background: '#3fb950',
+                background: '#5096b3',
                 marginLeft: '2px',
                 verticalAlign: 'text-bottom',
                 animation: 'heroChatDot 1s step-end infinite',
@@ -282,7 +282,7 @@ function AssistantMessage({msg}) {
         {msg.details && msg.details.length > 0 && (
           <div style={{marginTop: '8px', fontSize: '0.8rem'}}>
             {msg.details.map((d, i) => (
-              <div key={i} style={{color: '#56d364'}}>
+              <div key={i} style={{color: '#6ab0cc'}}>
                 {d}
               </div>
             ))}
@@ -324,8 +324,8 @@ function UserMessage({msg}) {
       }}>
       <div
         style={{
-          background: 'rgba(63,185,80,0.1)',
-          border: '1px solid rgba(63,185,80,0.2)',
+          background: 'rgba(80,150,179,0.1)',
+          border: '1px solid rgba(80,150,179,0.2)',
           borderRadius: '10px',
           padding: '10px 16px',
           color: '#e6edf3',
@@ -346,14 +346,14 @@ function TypingIndicator() {
           width: '32px',
           height: '32px',
           borderRadius: '8px',
-          background: 'rgba(63,185,80,0.12)',
-          border: '1px solid rgba(63,185,80,0.25)',
+          background: 'rgba(80,150,179,0.12)',
+          border: '1px solid rgba(80,150,179,0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
           marginTop: '2px',
-          color: '#3fb950',
+          color: '#5096b3',
           fontSize: '14px',
           fontWeight: 700,
         }}>
@@ -373,7 +373,7 @@ function TypingIndicator() {
               width: '6px',
               height: '6px',
               borderRadius: '50%',
-              background: '#3fb950',
+              background: '#5096b3',
               opacity: 0.4,
               animation: `heroChatDot 1.2s ease-in-out ${i * 0.2}s infinite`,
             }}

@@ -64,7 +64,7 @@ export default function SecurityCompliance() {
               flex: 1,
               height: 1,
               background:
-                'linear-gradient(90deg, #3fb950 0%, transparent 100%)',
+                'linear-gradient(90deg, #5096b3 0%, transparent 100%)',
               opacity: 0.3,
             }}
           />
@@ -92,7 +92,7 @@ export default function SecurityCompliance() {
               }}>
               Private by design,
               <br />
-              <span style={{color: '#3fb950'}}>secure by default</span>
+              <span style={{color: '#5096b3'}}>secure by default</span>
             </h2>
 
             <p
@@ -113,13 +113,13 @@ export default function SecurityCompliance() {
               <svg width="120" height="140" viewBox="0 0 120 140" fill="none">
                 <path
                   d="M60 8L16 28V64C16 96 60 132 60 132S104 96 104 64V28L60 8Z"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="1.5"
-                  fill="rgba(46,160,67,0.05)"
+                  fill="rgba(80,150,179,0.05)"
                 />
                 <path
                   d="M46 68L56 78L76 58"
-                  stroke="#3fb950"
+                  stroke="#5096b3"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -134,7 +134,7 @@ export default function SecurityCompliance() {
                   height: 200,
                   transform: 'translate(-50%, -50%)',
                   background:
-                    'radial-gradient(circle, rgba(46,160,67,0.12) 0%, transparent 70%)',
+                    'radial-gradient(circle, rgba(80,150,179,0.12) 0%, transparent 70%)',
                   pointerEvents: 'none',
                 }}
               />
@@ -166,7 +166,7 @@ export default function SecurityCompliance() {
                     style={{
                       fontFamily: "'JetBrains Mono', 'Courier New', monospace",
                       fontSize: '0.7rem',
-                      color: hoveredItem === i ? '#3fb950' : '#6e7681',
+                      color: hoveredItem === i ? '#5096b3' : '#6e7681',
                       letterSpacing: '0.1em',
                       transition: 'color 0.3s ease',
                     }}>

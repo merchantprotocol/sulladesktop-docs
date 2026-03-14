@@ -45,7 +45,7 @@ export default function HowItWorks() {
           width: '100%',
           height: '100%',
           background:
-            'radial-gradient(circle, rgba(46,160,67,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -70,7 +70,7 @@ export default function HowItWorks() {
             style={{
               flex: '0 1 80px',
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #3fb950)',
+              background: 'linear-gradient(90deg, transparent, #5096b3)',
             }}
           />
           <span
@@ -87,7 +87,7 @@ export default function HowItWorks() {
             style={{
               flex: '0 1 80px',
               height: 1,
-              background: 'linear-gradient(90deg, #3fb950, transparent)',
+              background: 'linear-gradient(90deg, #5096b3, transparent)',
             }}
           />
         </div>
@@ -139,13 +139,13 @@ export default function HowItWorks() {
                 maxWidth: 320,
                 padding: '2.5rem 2rem',
                 border: `1px solid ${
-                  hoveredCard === i ? '#3fb950' : '#30363d'
+                  hoveredCard === i ? '#5096b3' : '#30363d'
                 }`,
                 borderRadius: 12,
                 background: '#161b22',
                 boxShadow:
                   hoveredCard === i
-                    ? '0 0 30px rgba(46,160,67,0.1), inset 0 1px 0 rgba(255,255,255,0.03)'
+                    ? '0 0 30px rgba(80,150,179,0.1), inset 0 1px 0 rgba(255,255,255,0.03)'
                     : 'inset 0 1px 0 rgba(255,255,255,0.03)',
                 transition:
                   'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
@@ -156,7 +156,7 @@ export default function HowItWorks() {
               }}>
               <span
                 style={{
-                  color: '#3fb950',
+                  color: '#5096b3',
                   fontFamily: "'JetBrains Mono', 'Courier New', monospace",
                   fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
                   fontWeight: 700,
@@ -190,7 +190,7 @@ export default function HowItWorks() {
               <a
                 href={item.href}
                 style={{
-                  color: '#3fb950',
+                  color: '#5096b3',
                   fontFamily: "'JetBrains Mono', 'Courier New', monospace",
                   fontWeight: 600,
                   fontSize: '0.875rem',
@@ -199,7 +199,7 @@ export default function HowItWorks() {
                   ...(hoveredCard === i
                     ? {
                         color: '#fff',
-                        textShadow: '0 0 10px rgba(46,160,67,0.4)',
+                        textShadow: '0 0 10px rgba(80,150,179,0.4)',
                       }
                     : {}),
                 }}>

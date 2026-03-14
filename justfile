@@ -5,8 +5,8 @@ default:
     @just --list
 
 # Open the local dev server in the default browser
-open port="80":
-    open "http://localhost:{{port}}"
+open port="6149":
+    open "https://localhost:{{port}}"
 
 # Install all dependencies
 install:

@@ -14,7 +14,7 @@
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 8px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 1px rgba(63, 185, 80, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 1px rgba(80, 150, 179, 0.15);
   padding: 6px 0;
   font-family: var(--ifm-font-family-base);
   animation: menuFadeIn 0.15s ease-out;
@@ -78,8 +78,8 @@
   text-align: left;
 
   &:hover {
-    background: rgba(63, 185, 80, 0.1);
-    color: #3fb950;
+    background: rgba(80, 150, 179, 0.1);
+    color: #5096b3;
     text-decoration: none;
   }
 
@@ -115,8 +115,8 @@
   text-align: left;
 
   &:hover {
-    background: rgba(63, 185, 80, 0.1);
-    color: #3fb950;
+    background: rgba(80, 150, 179, 0.1);
+    color: #5096b3;
   }
 }
 
