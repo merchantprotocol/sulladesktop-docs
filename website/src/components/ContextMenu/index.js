@@ -116,7 +116,7 @@ export default function ContextMenu() {
   const [position, setPosition] = useState({x: 0, y: 0});
   const [openRight, setOpenRight] = useState(true);
   const menuRef = useRef(null);
-  const logoSrc = useBaseUrl('img/terminal-icon.svg');
+  const logoSrc = useBaseUrl('img/favicon-sulla.png');
 
   const handleContextMenu = useCallback(e => {
     e.preventDefault();

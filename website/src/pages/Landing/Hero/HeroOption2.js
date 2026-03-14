@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import HeroChatBox from './HeroChatBox';
 
 /**
@@ -59,45 +60,17 @@ const keyframes = `
 }
 `;
 
-/* Sulla logo SVG inline — matches terminal-icon.svg */
+/* Sulla logo — uses the actual brand icon */
 function SullaLogo({size = 14}) {
+  const logoSrc = useBaseUrl('img/favicon-sulla.png');
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
+    <img
+      src={logoSrc}
+      alt="Sulla Desktop"
       width={size}
       height={size}
-      fill="none"
-      style={{flexShrink: 0}}>
-      <rect
-        x="1.5"
-        y="4.5"
-        width="29"
-        height="23"
-        rx="3"
-        ry="3"
-        stroke="#5096B3"
-        strokeWidth="2.5"
-        fill="none"
-      />
-      <polyline
-        points="9,13 14,17 9,21"
-        stroke="#5096B3"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      <line
-        x1="17"
-        y1="21"
-        x2="23"
-        y2="21"
-        stroke="#5096B3"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-    </svg>
+      style={{flexShrink: 0}}
+    />
   );
 }
 

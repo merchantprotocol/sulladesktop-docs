@@ -30,7 +30,7 @@ module.exports = {
       defer: true,
     },
   ],
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon-sulla.png',
   titleDelimiter: '·',
   i18n: {
     defaultLocale: 'en',
@@ -92,10 +92,11 @@ module.exports = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'SULLA DESKTOP',
+        title: '',
         logo: {
-          src: 'img/terminal-icon.svg',
+          src: 'img/logo-sulla-desktop-white.png',
           alt: 'Sulla Desktop',
+          height: 36,
         },
         style: 'dark',
         items: [
@@ -166,10 +167,9 @@ module.exports = {
       image: 'img/logo-og.png',
       footer: {
         logo: {
-          src: 'img/terminal-icon.svg',
+          src: 'img/logo-sulla-desktop-white.png',
           alt: 'Sulla Desktop',
-          width: 24,
-          height: 24,
+          height: 28,
         },
         style: 'dark',
         links: [
