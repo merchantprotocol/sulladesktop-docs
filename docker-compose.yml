@@ -1,12 +1,12 @@
 services:
   app:
-    container_name: protocol-docs
+    container_name: sulladesktop-docs
     image: byrdziak/merchantprotocol-webserver-nginx-php8.1:initial
     restart: unless-stopped
     hostname: ${DOCKER_HOSTNAME}
     ports:
-      - "8800:80"
-      - "8443:443"
+      - "6147:80"
+      - "6149:443"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
