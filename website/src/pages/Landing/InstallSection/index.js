@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 export default function InstallSection() {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'brew install --cask sulla-desktop';
+  const installCmd = 'curl -fsSL https://sulladesktop.com/install.sh | sh';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);

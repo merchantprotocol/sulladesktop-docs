@@ -90,7 +90,7 @@ function HeroSvg() {
           fontSize="10"
           fontFamily="monospace"
           opacity="0.9">
-          $ brew install --cask sulla-desktop
+          $ curl -fsSL https://sulladesktop.com/install.sh | sh
         </text>
         <text
           x="12"

@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import HeroChatBox from './HeroChatBox';
 
 /**
  * OPTION 2 — "The Split Terminal" (Desktop App Edition)
@@ -26,6 +27,10 @@ const keyframes = `
 @keyframes opt2GlowPulse {
   0%, 100% { box-shadow: 0 0 15px rgba(63,185,80,0.3); }
   50% { box-shadow: 0 0 30px rgba(63,185,80,0.5); }
+}
+@keyframes heroChatDot {
+  0%, 80%, 100% { opacity: 0.4; transform: scale(1); }
+  40% { opacity: 1; transform: scale(1.3); }
 }
 .opt2-cta-primary {
   color: #fff !important;
@@ -127,8 +132,7 @@ function HeroOption2() {
       later(() => setPhase(2), 4200);
       later(() => setPhase(3), 5800); // shrink installer
       later(() => setPhase(4), 6600); // expand app
-      later(() => setPhase(5), 10000); // user chats
-      later(() => cycle(), 16000);
+      // Animation ends at phase 4 — interactive chat takes over
     };
     cycle();
     return () => clearAll();
@@ -280,10 +284,9 @@ function HeroOption2() {
                 fontSize: '1.15rem',
                 lineHeight: 1.5,
                 color: '#e6edf3',
-                borderLeft: '3px solid #3fb950',
-                paddingLeft: '1.5rem',
+                paddingLeft: '0',
                 marginBottom: '2rem',
-                boxShadow: '-4px 0 20px rgba(46,160,67,0.08)',
+                background: 'transparent',
               }}>
               &ldquo;AI assistant, Docker containers, workflow automation, and
               local LLMs — all in one desktop app.&rdquo;
@@ -470,7 +473,7 @@ function HeroOption2() {
                         color: '#6e7681',
                         letterSpacing: '0.05em',
                       }}>
-                      installer
+                      terminal
                     </span>
                   </div>
 
@@ -485,6 +488,10 @@ function HeroOption2() {
                     }}>
                     {phase === 0 && (
                       <>
+                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
+                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          https://sulladesktop.com/install.sh | sh
+                        </div>
                         <div style={{color: '#8b949e', marginBottom: '4px'}}>
                           Downloading Sulla Desktop...
                         </div>
@@ -497,15 +504,16 @@ function HeroOption2() {
                             fontSize: '0.7rem',
                             marginTop: '8px',
                           }}>
-                          sulla-desktop-v2.4.0-arm64.dmg
-                        </div>
-                        <div style={{color: '#6e7681', fontSize: '0.7rem'}}>
                           124 MB of 238 MB — 12s remaining
                         </div>
                       </>
                     )}
                     {phase === 1 && (
                       <>
+                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
+                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          https://sulladesktop.com/install.sh | sh
+                        </div>
                         <div style={{color: '#56d364'}}>
                           ✓ Download complete
                         </div>
@@ -522,6 +530,10 @@ function HeroOption2() {
                     )}
                     {phase >= 2 && (
                       <>
+                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
+                          <span style={{color: '#3fb950'}}>$</span> curl -fsSL
+                          https://sulladesktop.com/install.sh | sh
+                        </div>
                         <div style={{color: '#56d364'}}>
                           ✓ Download complete
                         </div>
@@ -554,6 +566,8 @@ function HeroOption2() {
                   position: 'absolute',
                   width: '115%',
                   maxWidth: '540px',
+                  height: '600px',
+                  maxHeight: '600px',
                   ...appStyle,
                   transition:
                     'transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease',
@@ -567,6 +581,9 @@ function HeroOption2() {
                     overflow: 'hidden',
                     boxShadow:
                       '0 16px 64px rgba(0,0,0,0.5), 0 0 30px rgba(46,160,67,0.08)',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}>
                   {/* App title bar with Sulla logo */}
                   <div
@@ -611,237 +628,8 @@ function HeroOption2() {
                     </div>
                   </div>
 
-                  {/* App body */}
-                  <div
-                    style={{
-                      padding: '20px 24px',
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: '0.8rem',
-                      lineHeight: 1.8,
-                      minHeight: '300px',
-                    }}>
-                    {/* Phase 4: Greeting */}
-                    {phase === 4 && (
-                      <div>
-                        <div
-                          style={{
-                            display: 'flex',
-                            gap: '12px',
-                            marginBottom: '16px',
-                          }}>
-                          <div
-                            style={{
-                              width: '32px',
-                              height: '32px',
-                              borderRadius: '8px',
-                              background: 'rgba(63,185,80,0.12)',
-                              border: '1px solid rgba(63,185,80,0.25)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              flexShrink: 0,
-                              marginTop: '2px',
-                            }}>
-                            <SullaLogo size={18} />
-                          </div>
-                          <div>
-                            <div
-                              style={{
-                                color: '#3fb950',
-                                fontSize: '0.75rem',
-                                fontWeight: 600,
-                                marginBottom: '6px',
-                              }}>
-                              Sulla
-                            </div>
-                            <div
-                              style={{
-                                color: '#8b949e',
-                                fontSize: '0.85rem',
-                                lineHeight: 1.7,
-                              }}>
-                              Hello! How can I help you today?
-                            </div>
-                            <div
-                              style={{
-                                color: '#6e7681',
-                                fontSize: '0.75rem',
-                                marginTop: '10px',
-                                lineHeight: 1.6,
-                              }}>
-                              I can help you manage containers, run workflows,
-                              chat with AI models, or configure your local LLMs.
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Input prompt */}
-                        <div
-                          style={{
-                            marginTop: '24px',
-                            padding: '12px 16px',
-                            background: '#0d1117',
-                            border: '1px solid #30363d',
-                            borderRadius: '8px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                          }}>
-                          <span
-                            style={{
-                              color: '#6e7681',
-                              fontSize: '0.8rem',
-                            }}>
-                            Ask Sulla anything...
-                          </span>
-                          <span
-                            style={{
-                              marginLeft: 'auto',
-                              display: 'inline-block',
-                              width: '7px',
-                              height: '15px',
-                              background: '#3fb950',
-                              animation: 'opt2Cursor 1s step-end infinite',
-                            }}
-                          />
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Phase 5: User chatting */}
-                    {phase === 5 && (
-                      <div>
-                        {/* Sulla greeting (compact) */}
-                        <div
-                          style={{
-                            display: 'flex',
-                            gap: '12px',
-                            marginBottom: '16px',
-                          }}>
-                          <div
-                            style={{
-                              width: '32px',
-                              height: '32px',
-                              borderRadius: '8px',
-                              background: 'rgba(63,185,80,0.12)',
-                              border: '1px solid rgba(63,185,80,0.25)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              flexShrink: 0,
-                              marginTop: '2px',
-                            }}>
-                            <SullaLogo size={18} />
-                          </div>
-                          <div>
-                            <div
-                              style={{
-                                color: '#3fb950',
-                                fontSize: '0.75rem',
-                                fontWeight: 600,
-                                marginBottom: '6px',
-                              }}>
-                              Sulla
-                            </div>
-                            <div
-                              style={{
-                                color: '#8b949e',
-                                fontSize: '0.85rem',
-                              }}>
-                              Hello! How can I help you today?
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* User message */}
-                        <div
-                          style={{
-                            display: 'flex',
-                            justifyContent: 'flex-end',
-                            marginBottom: '16px',
-                          }}>
-                          <div
-                            style={{
-                              background: 'rgba(63,185,80,0.1)',
-                              border: '1px solid rgba(63,185,80,0.2)',
-                              borderRadius: '10px',
-                              padding: '10px 16px',
-                              color: '#e6edf3',
-                              fontSize: '0.85rem',
-                              maxWidth: '80%',
-                            }}>
-                            Start my dev containers
-                          </div>
-                        </div>
-
-                        {/* Sulla response */}
-                        <div
-                          style={{
-                            display: 'flex',
-                            gap: '12px',
-                          }}>
-                          <div
-                            style={{
-                              width: '32px',
-                              height: '32px',
-                              borderRadius: '8px',
-                              background: 'rgba(63,185,80,0.12)',
-                              border: '1px solid rgba(63,185,80,0.25)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              flexShrink: 0,
-                              marginTop: '2px',
-                            }}>
-                            <SullaLogo size={18} />
-                          </div>
-                          <div>
-                            <div
-                              style={{
-                                color: '#3fb950',
-                                fontSize: '0.75rem',
-                                fontWeight: 600,
-                                marginBottom: '6px',
-                              }}>
-                              Sulla
-                            </div>
-                            <div
-                              style={{
-                                color: '#8b949e',
-                                fontSize: '0.85rem',
-                                lineHeight: 1.7,
-                              }}>
-                              Starting 3 containers...
-                            </div>
-                            <div
-                              style={{
-                                marginTop: '8px',
-                                fontSize: '0.8rem',
-                              }}>
-                              <div style={{color: '#56d364'}}>
-                                ✓ postgres:16 — running
-                              </div>
-                              <div style={{color: '#56d364'}}>
-                                ✓ redis:7 — running
-                              </div>
-                              <div style={{color: '#56d364'}}>
-                                ✓ nginx:latest — running
-                              </div>
-                            </div>
-                            <div
-                              style={{
-                                color: '#8b949e',
-                                fontSize: '0.8rem',
-                                marginTop: '8px',
-                              }}>
-                              All containers are up. Ports forwarded to
-                              localhost.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  {/* App body — interactive chat */}
+                  <HeroChatBox />
                 </div>
               </div>
             )}

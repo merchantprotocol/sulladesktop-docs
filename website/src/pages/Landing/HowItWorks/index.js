@@ -5,7 +5,7 @@ export default function HowItWorks() {
     {
       step: '01',
       title: 'Install Sulla Desktop',
-      desc: 'One Homebrew command installs everything you need. Run brew install --cask sulla-desktop on macOS, Windows, or Linux.',
+      desc: 'One command installs everything you need. Run curl -fsSL https://sulladesktop.com/install.sh | sh on macOS, Windows, or Linux.',
       href: '/installation_and_setup/first-time-installation-guide',
       linkText: 'Installation docs',
     },
