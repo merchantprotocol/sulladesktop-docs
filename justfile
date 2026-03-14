@@ -14,15 +14,17 @@ install:
 
 # Start the dev server with hot reload on port 80
 start:
-    yarn website:start -- --port 80 --host 0.0.0.0
+    protocol start
+
+stop:
+    protocol stop
+
+restart:
+    protocol restart
 
 # Build the static site for production
 build:
     yarn website:build
-
-# Serve the production build on port 80
-serve:
-    yarn website:serve -- --port 80 --host 0.0.0.0
 
 # Clean build artifacts and Docusaurus cache
 clean:
