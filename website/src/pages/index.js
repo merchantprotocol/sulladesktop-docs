@@ -1,7 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import HeroVariantG from './Landing/Hero/HeroVariantG';
+import HeroOption1 from './Landing/Hero/HeroOption1';
+import HeroOption2 from './Landing/Hero/HeroOption2';
+import HeroOption3 from './Landing/Hero/HeroOption3';
 import HeroVariantB from './Landing/Hero/HeroVariantB';
 import HowItWorks from './Landing/HowItWorks';
 import SecurityCompliance from './Landing/SecurityCompliance';
@@ -14,7 +16,15 @@ export default function Home() {
         <html className="SplashPage" />
       </Head>
 
-      <HeroVariantG />
+      {/* ── HERO OPTION 1: "The Cinematic Marquee" ── */}
+      <HeroOption1 />
+
+      {/* ── HERO OPTION 2: "The Split Terminal" ── */}
+      <HeroOption2 />
+
+      {/* ── HERO OPTION 3: "The Command Center" ── */}
+      <HeroOption3 />
+
       <HeroVariantB />
       <HowItWorks />
       <SecurityCompliance />
