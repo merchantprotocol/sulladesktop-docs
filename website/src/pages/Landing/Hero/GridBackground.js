@@ -31,8 +31,8 @@ function GridBackground() {
           r={1}
           gradientUnits="userSpaceOnUse"
           gradientTransform="matrix(0 -591.533 857.267 0 766.983 683.455)">
-          <stop stopColor="#5096b3" />
-          <stop offset={1} stopColor="#5096b3" stopOpacity={0} />
+          <stop stopColor="#EA5428" />
+          <stop offset={1} stopColor="#EA5428" stopOpacity={0} />
         </radialGradient>
       </defs>
     </svg>

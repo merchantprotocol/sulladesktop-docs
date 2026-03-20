@@ -1,5 +1,5 @@
 /**
- * Custom Footer component for the Sulla Desktop documentation site.
+ * Custom Footer component for the Ghost Agent documentation site.
  */
 import React from 'react';
 
@@ -14,14 +14,14 @@ function Footer() {
         <div className="mp-footer__grid">
           {/* Brand + Social */}
           <div className="mp-footer__brand">
-            <div className="mp-footer__brand-name">Sulla Desktop</div>
+            <div className="mp-footer__brand-name">Ghost Agent</div>
             <div className="mp-footer__brand-vol">AI-Powered Desktop App</div>
             <div className="mp-footer__brand-tagline">
               Docker, automation, and local LLMs.
             </div>
             <div className="mp-footer__social">
               <a
-                href="https://github.com/sulla-ai"
+                href="https://github.com/dataripple"
                 className="mp-footer__social-icon"
                 aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -29,7 +29,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="https://x.com/sulladesktop"
+                href="https://x.com/ghostagent"
                 className="mp-footer__social-icon"
                 aria-label="X / Twitter">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -43,9 +43,7 @@ function Footer() {
           <div className="mp-footer__col">
             <div className="mp-footer__col-title">Products</div>
             <div className="mp-footer__col-links">
-              <a href="https://github.com/sulla-ai/sulla-desktop">
-                Sulla Desktop
-              </a>
+              <a href="https://github.com/dataripple/ghostagent">Ghost Agent</a>
             </div>
           </div>
 
@@ -68,11 +66,11 @@ function Footer() {
           <div className="mp-footer__col">
             <div className="mp-footer__col-title">Community</div>
             <div className="mp-footer__col-links">
-              <a href="https://github.com/sulla-ai/sulla-desktop">GitHub</a>
-              <a href="https://github.com/sulla-ai/sulla-desktop/discussions">
+              <a href="https://github.com/dataripple/ghostagent">GitHub</a>
+              <a href="https://github.com/dataripple/ghostagent/discussions">
                 Discussions
               </a>
-              <a href="https://github.com/sulla-ai/sulla-desktop/issues">
+              <a href="https://github.com/dataripple/ghostagent/issues">
                 Issues
               </a>
             </div>
@@ -82,10 +80,8 @@ function Footer() {
           <div className="mp-footer__col">
             <div className="mp-footer__col-title">Connect</div>
             <div className="mp-footer__col-connect">
-              <a
-                href="mailto:info@sulladesktop.com"
-                className="mp-footer__email">
-                info@sulladesktop.com
+              <a href="mailto:info@ghostagent.com" className="mp-footer__email">
+                info@ghostagent.com
               </a>
             </div>
           </div>
@@ -94,7 +90,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="mp-footer__bottom">
           <div className="mp-footer__copyright">
-            &copy; {currentYear} Sulla AI. All rights reserved.
+            &copy; {currentYear} DataRipple.ai. All rights reserved.
           </div>
           <div className="mp-footer__built">Built with Docusaurus</div>
         </div>

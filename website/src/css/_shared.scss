@@ -1,29 +1,29 @@
 /**
- * Copyright (c) Merchant Protocol, LLC.
+ * Copyright (c) DataRipple.ai
  *
- * Shared SCSS mixins for Protocol Documentation theme.
+ * Shared SCSS mixins for Ghost Agent Documentation theme.
  */
 
 %link-style {
   display: initial;
-  color: #5096b3;
-  background-color: rgba(80, 150, 179, 0.08);
+  color: #ea5428;
+  background-color: rgba(234, 84, 40, 0.08);
   line-height: calc(var(--ifm-font-size-base) + 4px);
-  border-bottom: 1px solid rgba(80, 150, 179, 0.3);
+  border-bottom: 1px solid rgba(234, 84, 40, 0.3);
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: rgba(80, 150, 179, 0.15);
-    text-shadow: 0 0 10px rgba(80, 150, 179, 0.3);
+    background-color: rgba(234, 84, 40, 0.15);
+    text-shadow: 0 0 10px rgba(234, 84, 40, 0.3);
   }
 }
 
 %link-style-dark {
-  background-color: rgba(80, 150, 179, 0.08);
-  border-bottom-color: rgba(80, 150, 179, 0.3);
+  background-color: rgba(234, 84, 40, 0.08);
+  border-bottom-color: rgba(234, 84, 40, 0.3);
 
   &:hover {
-    background-color: rgba(80, 150, 179, 0.15);
+    background-color: rgba(234, 84, 40, 0.15);
     border-bottom-color: var(--brand);
   }
 }
@@ -48,7 +48,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(80, 150, 179, 0.06);
+    background: rgba(234, 84, 40, 0.06);
     color: var(--brand);
     border-color: var(--brand);
   }
@@ -61,22 +61,22 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #4485a0;
+    background: #cc3b11;
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-track {
-    background: #0d1117;
+    background: #121b27;
     border-radius: 10px;
   }
 }
 
 %scrollbar-style-dark {
   &::-webkit-scrollbar-track {
-    background: #0d1117;
+    background: #121b27;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #30363d;
+    background: #2f3c4e;
   }
 }

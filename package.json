@@ -1,5 +1,5 @@
 {
-  "name": "protocol-docs-monorepo",
+  "name": "ghostagent-docs-monorepo",
   "private": true,
   "workspaces": [
     "website",
@@ -9,11 +9,11 @@
   "scripts": {
     "postinstall": "yarn update-lock",
     "update-lock": "yarn-deduplicate",
-    "docusaurus": "yarn workspace sulla-desktop-docs-website docusaurus",
-    "website:start": "yarn workspace sulla-desktop-docs-website start",
-    "website:build": "yarn workspace sulla-desktop-docs-website build",
-    "website:build:fast": "yarn workspace sulla-desktop-docs-website build:fast",
-    "website:serve": "yarn workspace sulla-desktop-docs-website serve"
+    "docusaurus": "yarn workspace ghostagent-docs-website docusaurus",
+    "website:start": "yarn workspace ghostagent-docs-website start",
+    "website:build": "yarn workspace ghostagent-docs-website build",
+    "website:build:fast": "yarn workspace ghostagent-docs-website build:fast",
+    "website:serve": "yarn workspace ghostagent-docs-website serve"
   },
   "husky": {
     "hooks": {

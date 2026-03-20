@@ -1,13 +1,13 @@
 {
-  "name": "sulla-desktop-docs-website",
-  "description": "Sulla Desktop documentation website",
+  "name": "ghostagent-docs-website",
+  "description": "Ghost Agent documentation website by DataRipple",
   "version": "0.0.1",
   "private": true,
   "license": "CC-BY-4.0",
-  "homepage": "https://sulladesktop.com/",
-  "repository": "github:sulla-ai/sulla-desktop",
+  "homepage": "https://ghostagent.dataripple.ai/",
+  "repository": "github:dataripple/ghostagent",
   "bugs": {
-    "url": "https://github.com/sulla-ai/sulla-desktop/issues"
+    "url": "https://github.com/dataripple/ghostagent/issues"
   },
   "scripts": {
     "clean": "rm -rf build .docusaurus",

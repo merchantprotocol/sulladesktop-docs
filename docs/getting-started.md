@@ -1,73 +1,92 @@
 ---
 sidebar_position: 2
 sidebar_label: Getting Started
-slug: /getting-started
 ---
 
-# Getting Started with Sulla Desktop
+# Getting Started
 
-Welcome to Sulla Desktop! This guide will help you get up and running quickly.
+This guide walks you through setting up a local GhostAgent development environment.
 
-## Installation
+## Prerequisites
 
-### Download Pre-built Installers
+- Docker and Docker Compose
+- Node.js 20+
+- PHP 8.2+ with Composer (for Launchpad)
+- PostgreSQL 16 (or use the Docker container)
 
-Visit our [downloads page](https://sulladesktop.ai/downloads.html) to get the installer for your operating system:
+## Repository Structure
 
-- **macOS**: Download the .dmg file
-- **Windows**: Download the .exe installer
-- **Linux**: Download the .AppImage
-
-### Build from Source
-
-If you prefer to build from source:
-
-```bash
-git clone https://github.com/sulla-ai/sulla-desktop.git
-cd sulla-desktop
-yarn install
-yarn dev  # For development
-yarn build  # For production
+```
+dataripple/
+├── ghostagent/              # Original Laravel app (legacy)
+├── ghostagent-backend/      # FastAPI backend (being migrated to Launchpad)
+├── ghostagent-frontend/     # React 19 frontend
+├── ghostagent-gateway/      # Node.js WebSocket gateway
+├── ghostagent-docs/         # This documentation site (Docusaurus)
+└── launchpad/               # Laravel modular app (primary backend)
 ```
 
-## First Steps
+## Quick Start
 
-1. **Launch Sulla Desktop**: After installation, launch the application from your Applications folder (macOS), Start Menu (Windows), or application launcher (Linux).
+### 1. Gateway (WebSocket Server)
 
-2. **Initial Setup**: The first time you run Sulla Desktop, you'll be guided through the initial setup process.
+```bash
+cd ghostagent-gateway
+cp .env.example .env
+just up          # Starts gateway + Redis via Docker Compose
+just health      # Verify: http://localhost:8080/health
+```
 
-3. **Configure Your AI Assistant**: Set up your preferred AI model and configure your workspace settings.
+### 2. Frontend
 
-## Getting Help
+```bash
+cd ghostagent-frontend
+cp .env.example .env
+docker compose up -d
+# Access at http://localhost:3005
+```
 
-### Community Support
+### 3. Backend (FastAPI — Legacy)
 
-- **GitHub Discussions**: Join our [community forum](https://github.com/sulla-ai/sulla-desktop/discussions) for free support
-- **Bug Reports**: Report issues on [GitHub Issues](https://github.com/sulla-ai/sulla-desktop/issues)
+```bash
+cd ghostagent-backend
+docker compose up -d
+docker compose exec backend uv run alembic upgrade head
+docker compose exec backend uv run python seed.py
+# API docs at http://localhost:40365/docs
+```
 
-### Premium Support
+**Default credentials:** `admin@ghostagent.com` / `admin123`
 
-For direct access to our developers and priority support, join our [SKOOL community](https://www.skool.com/sulla) ($47/month).
+### 4. Documentation Site
 
-## Next Steps
+```bash
+cd ghostagent-docs
+yarn install
+yarn website:start
+# Access at http://localhost:3000
+```
 
-- Browse the [documentation](https://github.com/sulla-ai/sulla-desktop/tree/main/docs) to learn about advanced features
-- Check out example workflows and use cases
-- Join our community to connect with other users
+## Environment Variables
 
-## System Requirements
+Each component has its own `.env.example` file. Key variables:
 
-- **macOS**: macOS 11 Big Sur or later
-- **Windows**: Windows 10 or later
-- **Linux**: Ubuntu 20.04 or equivalent
-- **RAM**: Minimum 8GB (16GB recommended)
-- **Storage**: 2GB available space
+| Variable              | Component | Purpose                       |
+| --------------------- | --------- | ----------------------------- |
+| `ELEVENLABS_API_KEY`  | Gateway   | ElevenLabs conversational AI  |
+| `ELEVENLABS_AGENT_ID` | Gateway   | Default AI agent ID           |
+| `VONAGE_API_KEY`      | Gateway   | Vonage telephony              |
+| `API_SECRET`          | Gateway   | Laravel ↔ Gateway auth        |
+| `REDIS_URL`           | Gateway   | Multi-node scaling (optional) |
+| `VITE_API_URL`        | Frontend  | Backend API base URL          |
+| `DATABASE_URL`        | Backend   | PostgreSQL connection         |
 
-## License
+## Ports Reference
 
-Sulla Desktop uses a dual licensing model:
-
-- Core components are licensed under Apache License 2.0
-- Additional features are under proprietary license
-
-For more information, see our [Terms of Use](https://sulladesktop.ai/terms.html).
+| Port  | Service                   |
+| ----- | ------------------------- |
+| 3005  | Frontend (React)          |
+| 8080  | Gateway (WebSocket + API) |
+| 40365 | Backend API (FastAPI)     |
+| 45432 | PostgreSQL                |
+| 6379  | Redis                     |

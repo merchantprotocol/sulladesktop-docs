@@ -2,11 +2,11 @@
 set -euo pipefail
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Cloudflare Pages Deploy Script for Sulla Desktop Documentation
+# Cloudflare Pages Deploy Script for Ghost Agent Documentation
 # Idempotent: creates the project if it doesn't exist, then deploys.
 # ─────────────────────────────────────────────────────────────────────────────
 
-PROJECT_NAME="sulladesktop-docs"
+PROJECT_NAME="ghostagent-docs"
 BUILD_DIR="website/build"
 PRODUCTION_BRANCH="main"
 
@@ -81,7 +81,7 @@ info "Deploy complete!"
 echo ""
 info "Next steps:"
 info "  - Set custom domain: https://dash.cloudflare.com → Pages → $PROJECT_NAME → Custom domains"
-info "  - Add 'sulladesktop.com' as a custom domain"
+info "  - Add 'ghostagent.dataripple.ai' as a custom domain"
 info "  - Cloudflare will auto-provision SSL"
 echo ""
 info "404 handling: Cloudflare Pages automatically serves 404.html with HTTP 404 status."

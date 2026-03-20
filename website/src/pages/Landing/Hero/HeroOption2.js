@@ -8,7 +8,7 @@ import HeroChatBox from './HeroChatBox';
  * Two-column hero: left is editorial, right is an animated sequence:
  *   1. Installer window shows download/install progress
  *   2. Installer shrinks to nothing (scale 0)
- *   3. Sulla Desktop app window expands from nothing to LARGER than
+ *   3. Ghost Agent app window expands from nothing to LARGER than
  *      the installer was, with logo in the title bar and AI chat
  */
 
@@ -26,8 +26,8 @@ const keyframes = `
   100% { height: 120px; }
 }
 @keyframes opt2GlowPulse {
-  0%, 100% { box-shadow: 0 0 15px rgba(80,150,179,0.3); }
-  50% { box-shadow: 0 0 30px rgba(80,150,179,0.5); }
+  0%, 100% { box-shadow: 0 0 15px rgba(234,84,40,0.3); }
+  50% { box-shadow: 0 0 30px rgba(234,84,40,0.5); }
 }
 @keyframes heroChatDot {
   0%, 80%, 100% { opacity: 0.4; transform: scale(1); }
@@ -40,13 +40,13 @@ const keyframes = `
 .opt2-cta-primary:hover {
   color: #fff !important;
   text-decoration: none !important;
-  background: #5096b3 !important;
-  box-shadow: 0 0 24px rgba(80,150,179,0.4) !important;
+  background: #EA5428 !important;
+  box-shadow: 0 0 24px rgba(234,84,40,0.4) !important;
   transform: translateY(-2px) !important;
 }
 .opt2-cta-outline:hover {
-  border-color: #5096b3 !important;
-  color: #5096b3 !important;
+  border-color: #EA5428 !important;
+  color: #EA5428 !important;
   transform: translateY(-2px) !important;
 }
 @media (max-width: 900px) {
@@ -60,13 +60,13 @@ const keyframes = `
 }
 `;
 
-/* Sulla logo — uses the actual brand icon */
-function SullaLogo({size = 14}) {
-  const logoSrc = useBaseUrl('img/favicon-sulla.png');
+/* Ghost Agent logo — uses the actual brand icon */
+function GhostAgentLogo({size = 14}) {
+  const logoSrc = useBaseUrl('img/favicon-ghostagent.png');
   return (
     <img
       src={logoSrc}
-      alt="Sulla Desktop"
+      alt="Ghost Agent Logo"
       width={size}
       height={size}
       style={{flexShrink: 0}}
@@ -147,7 +147,7 @@ function HeroOption2() {
           minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
-          background: '#0d1117',
+          background: '#121B27',
           overflow: 'hidden',
         }}>
         {/* Grid lines background */}
@@ -156,8 +156,8 @@ function HeroOption2() {
             position: 'absolute',
             inset: 0,
             backgroundImage: `
-              linear-gradient(rgba(80,150,179,0.025) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(80,150,179,0.025) 1px, transparent 1px)
+              linear-gradient(rgba(234,84,40,0.025) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(234,84,40,0.025) 1px, transparent 1px)
             `,
             backgroundSize: '80px 80px',
             pointerEvents: 'none',
@@ -175,7 +175,7 @@ function HeroOption2() {
             height: '800px',
             borderRadius: '50%',
             background:
-              'radial-gradient(ellipse, rgba(80,150,179,0.1) 0%, transparent 60%)',
+              'radial-gradient(ellipse, rgba(234,84,40,0.1) 0%, transparent 60%)',
             pointerEvents: 'none',
           }}
         />
@@ -202,12 +202,12 @@ function HeroOption2() {
             }}>
             <div
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "'Lexend', sans-serif",
                 fontSize: '0.6rem',
                 fontWeight: 500,
                 letterSpacing: '0.35em',
                 textTransform: 'uppercase',
-                color: '#6e7681',
+                color: '#7A8DA0',
                 marginBottom: '2rem',
                 display: 'flex',
                 alignItems: 'center',
@@ -218,21 +218,21 @@ function HeroOption2() {
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
-                  background: '#5096b3',
-                  boxShadow: '0 0 10px rgba(80,150,179,0.5)',
+                  background: '#EA5428',
+                  boxShadow: '0 0 10px rgba(234,84,40,0.5)',
                 }}
               />
-              Sulla Desktop
+              Ghost Agent
             </div>
 
             <h1
               className="opt2-headline"
               style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
+                fontFamily: "'Ubuntu', sans-serif",
                 fontWeight: 900,
                 fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
                 lineHeight: 1.05,
-                color: '#e6edf3',
+                color: '#DFE7F4',
                 margin: '0 0 2rem',
                 letterSpacing: '-0.02em',
               }}>
@@ -240,9 +240,9 @@ function HeroOption2() {
               <br />
               <em
                 style={{
-                  color: '#5096b3',
+                  color: '#EA5428',
                   fontStyle: 'italic',
-                  textShadow: '0 0 60px rgba(80,150,179,0.3)',
+                  textShadow: '0 0 60px rgba(234,84,40,0.3)',
                 }}>
                 Desktop App.
               </em>
@@ -251,12 +251,12 @@ function HeroOption2() {
             {/* Pull quote */}
             <div
               style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
+                fontFamily: "'Ubuntu', sans-serif",
                 fontWeight: 700,
                 fontStyle: 'italic',
                 fontSize: '1.15rem',
                 lineHeight: 1.5,
-                color: '#e6edf3',
+                color: '#DFE7F4',
                 paddingLeft: '0',
                 marginBottom: '2rem',
                 background: 'transparent',
@@ -267,10 +267,10 @@ function HeroOption2() {
 
             <p
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "'Lexend', sans-serif",
                 fontSize: '0.85rem',
                 lineHeight: 1.8,
-                color: '#8b949e',
+                color: '#ADBFD6',
                 marginBottom: '2.5rem',
                 maxWidth: '440px',
               }}>
@@ -294,9 +294,9 @@ function HeroOption2() {
                   alignItems: 'center',
                   gap: '8px',
                   padding: '14px 32px',
-                  background: '#4485a0',
+                  background: '#CC3B11',
                   color: '#fff',
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Lexend', sans-serif",
                   fontSize: '0.85rem',
                   fontWeight: 600,
                   letterSpacing: '0.05em',
@@ -327,13 +327,13 @@ function HeroOption2() {
                   alignItems: 'center',
                   padding: '14px 32px',
                   background: 'transparent',
-                  color: '#e6edf3',
-                  fontFamily: "'JetBrains Mono', monospace",
+                  color: '#DFE7F4',
+                  fontFamily: "'Lexend', sans-serif",
                   fontSize: '0.85rem',
                   fontWeight: 400,
                   letterSpacing: '0.05em',
                   borderRadius: '8px',
-                  border: '1px solid #30363d',
+                  border: '1px solid #2F3C4E',
                   textDecoration: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -355,11 +355,11 @@ function HeroOption2() {
                 <span
                   key={p}
                   style={{
-                    border: '1px solid #30363d',
+                    border: '1px solid #2F3C4E',
                     borderRadius: '20px',
                     padding: '4px 14px',
-                    color: '#6e7681',
-                    fontFamily: "'JetBrains Mono', monospace",
+                    color: '#7A8DA0',
+                    fontFamily: "'Lexend', sans-serif",
                     fontSize: '0.65rem',
                     letterSpacing: '0.05em',
                   }}>
@@ -375,7 +375,7 @@ function HeroOption2() {
             style={{
               width: '2px',
               background:
-                'linear-gradient(to bottom, transparent, #5096b3, transparent)',
+                'linear-gradient(to bottom, transparent, #EA5428, transparent)',
               animation:
                 'opt2LineGrow 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both, opt2GlowPulse 3s ease-in-out infinite',
               alignSelf: 'stretch',
@@ -409,8 +409,8 @@ function HeroOption2() {
                 }}>
                 <div
                   style={{
-                    background: '#161b22',
-                    border: '1px solid #30363d',
+                    background: '#1A2535',
+                    border: '1px solid #2F3C4E',
                     borderRadius: '10px',
                     overflow: 'hidden',
                     boxShadow:
@@ -423,8 +423,8 @@ function HeroOption2() {
                       alignItems: 'center',
                       gap: '6px',
                       padding: '10px 14px',
-                      background: '#1c2128',
-                      borderBottom: '1px solid #30363d',
+                      background: '#1E2A3A',
+                      borderBottom: '1px solid #2F3C4E',
                     }}>
                     {['#ff5f57', '#febc2e', '#28c840'].map(c => (
                       <span
@@ -443,7 +443,7 @@ function HeroOption2() {
                         marginLeft: 'auto',
                         fontFamily: "'JetBrains Mono', monospace",
                         fontSize: '0.7rem',
-                        color: '#6e7681',
+                        color: '#7A8DA0',
                         letterSpacing: '0.05em',
                       }}>
                       terminal
@@ -461,19 +461,19 @@ function HeroOption2() {
                     }}>
                     {phase === 0 && (
                       <>
-                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
-                          https://sulladesktop.com/install.sh | sh
+                        <div style={{color: '#DFE7F4', marginBottom: '8px'}}>
+                          <span style={{color: '#EA5428'}}>$</span> curl -fsSL
+                          https://ghostagent.com/install.sh | sh
                         </div>
-                        <div style={{color: '#8b949e', marginBottom: '4px'}}>
-                          Downloading Sulla Desktop...
+                        <div style={{color: '#ADBFD6', marginBottom: '4px'}}>
+                          Downloading Ghost Agent...
                         </div>
-                        <div style={{color: '#5096b3'}}>
+                        <div style={{color: '#EA5428'}}>
                           ████████░░░░░░░░ 52%
                         </div>
                         <div
                           style={{
-                            color: '#6e7681',
+                            color: '#7A8DA0',
                             fontSize: '0.7rem',
                             marginTop: '8px',
                           }}>
@@ -483,46 +483,46 @@ function HeroOption2() {
                     )}
                     {phase === 1 && (
                       <>
-                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
-                          https://sulladesktop.com/install.sh | sh
+                        <div style={{color: '#DFE7F4', marginBottom: '8px'}}>
+                          <span style={{color: '#EA5428'}}>$</span> curl -fsSL
+                          https://ghostagent.com/install.sh | sh
                         </div>
-                        <div style={{color: '#6ab0cc'}}>
+                        <div style={{color: '#F7714A'}}>
                           ✓ Download complete
                         </div>
-                        <div style={{color: '#8b949e', marginTop: '8px'}}>
-                          Installing Sulla Desktop...
+                        <div style={{color: '#ADBFD6', marginTop: '8px'}}>
+                          Installing Ghost Agent...
                         </div>
-                        <div style={{color: '#8b949e', marginTop: '4px'}}>
+                        <div style={{color: '#ADBFD6', marginTop: '4px'}}>
                           Configuring AI engine...
                         </div>
-                        <div style={{color: '#5096b3', marginTop: '4px'}}>
+                        <div style={{color: '#EA5428', marginTop: '4px'}}>
                           ████████████░░░░ 75%
                         </div>
                       </>
                     )}
                     {phase >= 2 && (
                       <>
-                        <div style={{color: '#e6edf3', marginBottom: '8px'}}>
-                          <span style={{color: '#5096b3'}}>$</span> curl -fsSL
-                          https://sulladesktop.com/install.sh | sh
+                        <div style={{color: '#DFE7F4', marginBottom: '8px'}}>
+                          <span style={{color: '#EA5428'}}>$</span> curl -fsSL
+                          https://ghostagent.com/install.sh | sh
                         </div>
-                        <div style={{color: '#6ab0cc'}}>
+                        <div style={{color: '#F7714A'}}>
                           ✓ Download complete
                         </div>
-                        <div style={{color: '#6ab0cc'}}>
+                        <div style={{color: '#F7714A'}}>
                           ✓ Installation complete
                         </div>
-                        <div style={{color: '#6ab0cc'}}>
+                        <div style={{color: '#F7714A'}}>
                           ✓ AI engine configured
                         </div>
                         <div
                           style={{
-                            color: '#5096b3',
+                            color: '#EA5428',
                             marginTop: '12px',
                             fontWeight: 600,
                           }}>
-                          Launching Sulla Desktop...
+                          Launching Ghost Agent...
                         </div>
                       </>
                     )}
@@ -548,25 +548,25 @@ function HeroOption2() {
                 }}>
                 <div
                   style={{
-                    background: '#161b22',
-                    border: '1px solid rgba(80,150,179,0.3)',
+                    background: '#1A2535',
+                    border: '1px solid rgba(234,84,40,0.3)',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     boxShadow:
-                      '0 16px 64px rgba(0,0,0,0.5), 0 0 30px rgba(80,150,179,0.08)',
+                      '0 16px 64px rgba(0,0,0,0.5), 0 0 30px rgba(234,84,40,0.08)',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                   }}>
-                  {/* App title bar with Sulla logo */}
+                  {/* App title bar with Ghost Agent logo */}
                   <div
                     style={{
                       display: 'flex',
                       alignItems: 'center',
                       gap: '6px',
                       padding: '12px 16px',
-                      background: '#1c2128',
-                      borderBottom: '1px solid #30363d',
+                      background: '#1E2A3A',
+                      borderBottom: '1px solid #2F3C4E',
                     }}>
                     {['#ff5f57', '#febc2e', '#28c840'].map(c => (
                       <span
@@ -587,16 +587,16 @@ function HeroOption2() {
                         alignItems: 'center',
                         gap: '8px',
                       }}>
-                      <SullaLogo size={16} />
+                      <GhostAgentLogo size={16} />
                       <span
                         style={{
-                          fontFamily: "'JetBrains Mono', monospace",
+                          fontFamily: "'Lexend', sans-serif",
                           fontSize: '0.75rem',
-                          color: '#5096b3',
+                          color: '#EA5428',
                           letterSpacing: '0.05em',
                           fontWeight: 600,
                         }}>
-                        Sulla Desktop
+                        Ghost Agent
                       </span>
                     </div>
                   </div>

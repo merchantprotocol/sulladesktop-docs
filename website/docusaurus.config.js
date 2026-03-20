@@ -1,11 +1,11 @@
-const copyright = `Copyright © ${new Date().getFullYear()} Sulla AI.`;
+const copyright = `Copyright © ${new Date().getFullYear()} DataRipple.ai`;
 
 const commonDocsOptions = {
   breadcrumbs: true,
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   editUrl:
-    'https://github.com/sulla-ai/sulla-desktop/blob/main/sulladesktop-docs/website/',
+    'https://github.com/dataripple/ghostagent/blob/main/ghostagent-docs/website/',
   remarkPlugins: [],
 };
 
@@ -13,11 +13,11 @@ const isDeployPreview = process.env.PREVIEW_DEPLOY === 'true';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Sulla Desktop Documentation',
-  tagline: 'AI-powered desktop app with Docker, automation, and local LLMs.',
-  organizationName: 'sulla-ai',
-  projectName: 'sulla-desktop',
-  url: 'https://sulladesktop.com',
+  title: 'Ghost Agent Documentation',
+  tagline: 'AI-powered call center agent platform by DataRipple.',
+  organizationName: 'dataripple',
+  projectName: 'ghostagent',
+  url: 'https://ghostagent.dataripple.ai',
   baseUrl: '/',
   clientModules: [
     require.resolve('./modules/jumpToFragment.js'),
@@ -30,7 +30,7 @@ module.exports = {
       defer: true,
     },
   ],
-  favicon: 'img/favicon-sulla.png',
+  favicon: 'img/favicon.png',
   titleDelimiter: '·',
   i18n: {
     defaultLocale: 'en',
@@ -94,8 +94,8 @@ module.exports = {
       navbar: {
         title: '',
         logo: {
-          src: 'img/logo-sulla-desktop-white.png',
-          alt: 'Sulla Desktop',
+          src: 'img/logo-ghostagent-white.png',
+          alt: 'Ghost Agent',
           height: 36,
         },
         style: 'dark',
@@ -107,58 +107,101 @@ module.exports = {
             position: 'right',
           },
           {
-            label: 'Guides',
+            label: 'Architecture',
             type: 'dropdown',
             position: 'right',
             items: [
               {
-                label: 'Installation',
+                label: 'Overview',
                 type: 'doc',
-                docId: 'installation_and_setup/first-time-installation-guide',
+                docId: 'architecture/overview',
               },
               {
-                label: 'AI Configuration',
+                label: 'Scaling',
                 type: 'doc',
-                docId: 'ai_configuration/choosing-ai-models',
-              },
-              {
-                label: 'Docker & Development',
-                type: 'doc',
-                docId: 'docker_and_development/docker-desktop-integration',
-              },
-              {
-                label: 'Extensions',
-                type: 'doc',
-                docId: 'extensions/index',
+                docId: 'architecture/scaling',
               },
             ],
           },
           {
-            label: 'Develop',
+            label: 'API',
             type: 'dropdown',
             position: 'right',
             items: [
               {
-                label: 'API Reference',
+                label: 'Authentication',
                 type: 'doc',
-                docId: 'api/command-server',
+                docId: 'api/authentication',
               },
               {
-                label: 'Workflows',
+                label: 'Users & Roles',
                 type: 'doc',
-                docId:
-                  'automation_and_workflows/creating-your-first-n8n-workflow',
+                docId: 'api/users',
               },
               {
-                label: 'Development',
+                label: 'Actions',
                 type: 'doc',
-                docId: 'development/features',
+                docId: 'api/actions',
+              },
+              {
+                label: 'Gateway Control',
+                type: 'doc',
+                docId: 'api/gateway',
+              },
+              {
+                label: 'WebSocket Events',
+                type: 'doc',
+                docId: 'api/websocket',
               },
             ],
           },
           {
-            href: 'https://github.com/sulla-ai/sulla-desktop',
-            label: 'sulla-ai/sulla-desktop',
+            label: 'Frontend',
+            type: 'dropdown',
+            position: 'right',
+            items: [
+              {
+                label: 'Pages & Routes',
+                type: 'doc',
+                docId: 'frontend/pages',
+              },
+              {
+                label: 'Live Dashboard',
+                type: 'doc',
+                docId: 'frontend/dashboard',
+              },
+              {
+                label: 'Features',
+                type: 'doc',
+                docId: 'frontend/features',
+              },
+            ],
+          },
+          {
+            label: 'Integrations',
+            type: 'dropdown',
+            position: 'right',
+            items: [
+              {
+                label: 'ElevenLabs',
+                type: 'doc',
+                docId: 'integrations/elevenlabs',
+              },
+              {
+                label: 'Vonage',
+                type: 'doc',
+                docId: 'integrations/vonage',
+              },
+              {
+                label: 'Other',
+                type: 'doc',
+                docId: 'integrations/other',
+              },
+            ],
+          },
+          {
+            href: 'https://github.com/dataripple/ghostagent',
+            label: 'dataripple/ghostagent',
             position: 'right',
             className: 'navbar-github-link',
           },
@@ -167,8 +210,8 @@ module.exports = {
       image: 'img/logo-og.png',
       footer: {
         logo: {
-          src: 'img/logo-sulla-desktop-white.png',
-          alt: 'Sulla Desktop',
+          src: 'img/logo-ghostagent-white.png',
+          alt: 'Ghost Agent',
           height: 28,
         },
         style: 'dark',
@@ -181,33 +224,37 @@ module.exports = {
                 to: '/getting-started',
               },
               {
-                label: 'Installation',
-                to: '/installation_and_setup/first-time-installation-guide',
+                label: 'Architecture',
+                to: '/architecture/overview',
               },
               {
-                label: 'AI Configuration',
-                to: '/ai_configuration/choosing-ai-models',
+                label: 'API Reference',
+                to: '/api/authentication',
               },
               {
-                label: 'Extensions',
-                to: '/extensions',
+                label: 'WebSocket Events',
+                to: '/api/websocket',
               },
             ],
           },
           {
-            title: 'Develop',
+            title: 'Platform',
             items: [
               {
-                label: 'API Reference',
-                to: '/api/command-server',
+                label: 'Frontend Pages',
+                to: '/frontend/pages',
               },
               {
-                label: 'Docker & Development',
-                to: '/docker_and_development/docker-desktop-integration',
+                label: 'Live Dashboard',
+                to: '/frontend/dashboard',
               },
               {
-                label: 'Workflows',
-                to: '/automation_and_workflows/creating-your-first-n8n-workflow',
+                label: 'Database Schema',
+                to: '/backend/database',
+              },
+              {
+                label: 'Tech Stack',
+                to: '/backend/tech-stack',
               },
             ],
           },
@@ -216,11 +263,11 @@ module.exports = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/sulla-ai/sulla-desktop',
+                href: 'https://github.com/dataripple/ghostagent',
               },
               {
                 label: 'Discussions',
-                href: 'https://github.com/sulla-ai/sulla-desktop/discussions',
+                href: 'https://github.com/dataripple/ghostagent/discussions',
               },
             ],
           },
