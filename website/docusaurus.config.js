@@ -5,7 +5,7 @@ const commonDocsOptions = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   editUrl:
-    'https://github.com/dataripple/ghostagent/blob/main/ghostagent-docs/website/',
+'https://github.com/merchantprotocol/sulla-desktop/blob/main/docs/website/',
   remarkPlugins: [],
 };
 
@@ -13,11 +13,11 @@ const isDeployPreview = process.env.PREVIEW_DEPLOY === 'true';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Ghost Agent Documentation',
-  tagline: 'AI-powered call center agent platform by DataRipple.',
-  organizationName: 'dataripple',
-  projectName: 'ghostagent',
-  url: 'https://ghostagent.dataripple.ai',
+title: 'Sulla Desktop Documentation',
+  tagline: 'AI-powered desktop app with Docker, automation, and local LLMs.',
+  organizationName: 'sulla-ai',
+  projectName: 'sulla-desktop',
+  url: 'https://docs.sulladesktop.com',
   baseUrl: '/',
   clientModules: [
     require.resolve('./modules/jumpToFragment.js'),
@@ -66,6 +66,9 @@ module.exports = {
             type: 'all',
             copyright,
           },
+        },
+        pages: {
+          exclude: ['**/Landing/**'],
         },
         theme: {
           customCss: [

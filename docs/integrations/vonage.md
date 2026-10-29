@@ -27,7 +27,7 @@ When a call arrives, Vonage hits the answer webhook. The Gateway responds with a
     "endpoint": [
       {
         "type": "websocket",
-        "uri": "wss://gateway-host:8080/vonage/audio/{callId}",
+        "uri": "wss://gateway-host/vonage/audio/{callId}",
         "content-type": "audio/l16;rate=16000"
       }
     ]
@@ -55,7 +55,7 @@ Call state changes trigger event webhooks:
 Once the NCCO is returned, Vonage opens a WebSocket to the Gateway at:
 
 ```
-wss://gateway-host:8080/vonage/audio/{callId}
+wss://gateway-host/vonage/audio/{callId}
 ```
 
 The Gateway:

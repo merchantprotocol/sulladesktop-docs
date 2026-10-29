@@ -34,7 +34,7 @@ dataripple/
 cd ghostagent-gateway
 cp .env.example .env
 just up          # Starts gateway + Redis via Docker Compose
-just health      # Verify: http://localhost:8080/health
+just health      # Verify: http://localhost/health
 ```
 
 ### 2. Frontend

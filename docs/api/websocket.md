@@ -10,7 +10,7 @@ The Gateway provides real-time WebSocket connections for CSR frontends.
 ## Connecting
 
 ```
-ws://gateway-host:8080/ws/{userId}?role=FE&token={accessToken}
+ws://gateway-host/ws/{userId}?role=FE&token={accessToken}
 ```
 
 The `socket_url` is returned in the login response and points to the user's WebSocket room.

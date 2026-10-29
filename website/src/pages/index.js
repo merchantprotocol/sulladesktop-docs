@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import HeroOption2 from './Landing/Hero/HeroOption2';
-import HeroVariantB from './Landing/Hero/HeroVariantB';
-import HowItWorks from './Landing/HowItWorks';
-import SecurityCompliance from './Landing/SecurityCompliance';
-import BottomCta from './Landing/BottomCta';
+import HeroOption2 from '../components/Landing/Hero/HeroOption2';
+import HeroVariantB from '../components/Landing/Hero/HeroVariantB';
+import HowItWorks from '../components/Landing/HowItWorks';
+import SecurityCompliance from '../components/Landing/SecurityCompliance';
+import BottomCta from '../components/Landing/BottomCta';
 
 export default function Home() {
   return (

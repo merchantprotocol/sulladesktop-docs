@@ -21,7 +21,7 @@ function Footer() {
             </div>
             <div className="mp-footer__social">
               <a
-                href="https://github.com/dataripple"
+                href="https://github.com/merchantprotocol"
                 className="mp-footer__social-icon"
                 aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -43,7 +43,9 @@ function Footer() {
           <div className="mp-footer__col">
             <div className="mp-footer__col-title">Products</div>
             <div className="mp-footer__col-links">
-              <a href="https://github.com/dataripple/ghostagent">Ghost Agent</a>
+              <a href="https://github.com/merchantprotocol/sulla-desktop">
+                Sulla Desktop
+              </a>
             </div>
           </div>
 
@@ -66,11 +68,11 @@ function Footer() {
           <div className="mp-footer__col">
             <div className="mp-footer__col-title">Community</div>
             <div className="mp-footer__col-links">
-              <a href="https://github.com/dataripple/ghostagent">GitHub</a>
-              <a href="https://github.com/dataripple/ghostagent/discussions">
+              <a href="https://github.com/merchantprotocol/sulla-desktop">GitHub</a>
+              <a href="https://github.com/merchantprotocol/sulla-desktop/discussions">
                 Discussions
               </a>
-              <a href="https://github.com/dataripple/ghostagent/issues">
+              <a href="https://github.com/merchantprotocol/sulla-desktop/issues">
                 Issues
               </a>
             </div>
