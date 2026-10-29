@@ -30,7 +30,7 @@ const CANNED_RESPONSES = [
   {
     keywords: ['hello', 'hi', 'hey', 'sup', 'what'],
     reply:
-      "I'm Sulla, your AI desktop assistant. I can manage containers, run workflows, and connect to local LLMs.",
+      "I'm Ghost Agent, your AI desktop assistant. I can manage containers, run workflows, and connect to local LLMs.",
     details: [],
     footer: 'Try asking me to start your dev containers!',
   },
@@ -149,7 +149,7 @@ export default function HeroChatBox() {
           flex: 1,
           overflowY: 'auto',
           padding: '20px 24px',
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "'Lexend', sans-serif",
           fontSize: '0.8rem',
           lineHeight: 1.8,
         }}>
@@ -168,34 +168,34 @@ export default function HeroChatBox() {
         onSubmit={handleSubmit}
         style={{
           padding: '12px 16px',
-          borderTop: '1px solid #30363d',
+          borderTop: '1px solid #2F3C4E',
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
-          background: '#0d1117',
+          background: '#121B27',
           borderRadius: '0 0 12px 12px',
         }}>
         <input
           type="text"
           value={input}
           onChange={e => setInput(e.target.value)}
-          placeholder="Ask Sulla anything..."
+          placeholder="Ask Ghost Agent anything..."
           style={{
             flex: 1,
             background: 'transparent',
             border: 'none',
             outline: 'none',
-            color: '#e6edf3',
-            fontFamily: "'JetBrains Mono', monospace",
+            color: '#DFE7F4',
+            fontFamily: "'Lexend', sans-serif",
             fontSize: '0.8rem',
-            caretColor: '#5096b3',
+            caretColor: '#EA5428',
           }}
         />
         <button
           type="submit"
           disabled={!input.trim() || typing}
           style={{
-            background: input.trim() && !typing ? '#4485a0' : '#21262d',
+            background: input.trim() && !typing ? '#CC3B11' : '#2F3C4E',
             border: 'none',
             borderRadius: '6px',
             padding: '6px 12px',
@@ -209,7 +209,7 @@ export default function HeroChatBox() {
             height="14"
             viewBox="0 0 24 24"
             fill="none"
-            stroke={input.trim() && !typing ? '#fff' : '#6e7681'}
+            stroke={input.trim() && !typing ? '#fff' : '#7A8DA0'}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round">
@@ -235,32 +235,32 @@ function AssistantMessage({msg}) {
           width: '32px',
           height: '32px',
           borderRadius: '8px',
-          background: 'rgba(80,150,179,0.12)',
-          border: '1px solid rgba(80,150,179,0.25)',
+          background: 'rgba(234,84,40,0.12)',
+          border: '1px solid rgba(234,84,40,0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
           marginTop: '2px',
-          color: '#5096b3',
+          color: '#EA5428',
           fontSize: '14px',
           fontWeight: 700,
         }}>
-        S
+        G
       </div>
       <div>
         <div
           style={{
-            color: '#5096b3',
+            color: '#EA5428',
             fontSize: '0.75rem',
             fontWeight: 600,
             marginBottom: '6px',
           }}>
-          Sulla
+          Ghost Agent
         </div>
         <div
           style={{
-            color: '#8b949e',
+            color: '#ADBFD6',
             fontSize: '0.85rem',
             lineHeight: 1.7,
           }}>
@@ -271,7 +271,7 @@ function AssistantMessage({msg}) {
                 display: 'inline-block',
                 width: '6px',
                 height: '14px',
-                background: '#5096b3',
+                background: '#EA5428',
                 marginLeft: '2px',
                 verticalAlign: 'text-bottom',
                 animation: 'heroChatDot 1s step-end infinite',
@@ -282,7 +282,7 @@ function AssistantMessage({msg}) {
         {msg.details && msg.details.length > 0 && (
           <div style={{marginTop: '8px', fontSize: '0.8rem'}}>
             {msg.details.map((d, i) => (
-              <div key={i} style={{color: '#6ab0cc'}}>
+              <div key={i} style={{color: '#F7714A'}}>
                 {d}
               </div>
             ))}
@@ -291,7 +291,7 @@ function AssistantMessage({msg}) {
         {msg.subtext && (
           <div
             style={{
-              color: '#6e7681',
+              color: '#7A8DA0',
               fontSize: '0.75rem',
               marginTop: '10px',
               lineHeight: 1.6,
@@ -302,7 +302,7 @@ function AssistantMessage({msg}) {
         {msg.footer && (
           <div
             style={{
-              color: '#8b949e',
+              color: '#ADBFD6',
               fontSize: '0.8rem',
               marginTop: '8px',
             }}>
@@ -324,11 +324,11 @@ function UserMessage({msg}) {
       }}>
       <div
         style={{
-          background: 'rgba(80,150,179,0.1)',
-          border: '1px solid rgba(80,150,179,0.2)',
+          background: 'rgba(234,84,40,0.1)',
+          border: '1px solid rgba(234,84,40,0.2)',
           borderRadius: '10px',
           padding: '10px 16px',
-          color: '#e6edf3',
+          color: '#DFE7F4',
           fontSize: '0.85rem',
           maxWidth: '80%',
         }}>
@@ -346,18 +346,18 @@ function TypingIndicator() {
           width: '32px',
           height: '32px',
           borderRadius: '8px',
-          background: 'rgba(80,150,179,0.12)',
-          border: '1px solid rgba(80,150,179,0.25)',
+          background: 'rgba(234,84,40,0.12)',
+          border: '1px solid rgba(234,84,40,0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
           marginTop: '2px',
-          color: '#5096b3',
+          color: '#EA5428',
           fontSize: '14px',
           fontWeight: 700,
         }}>
-        S
+        G
       </div>
       <div
         style={{
@@ -373,7 +373,7 @@ function TypingIndicator() {
               width: '6px',
               height: '6px',
               borderRadius: '50%',
-              background: '#5096b3',
+              background: '#EA5428',
               opacity: 0.4,
               animation: `heroChatDot 1.2s ease-in-out ${i * 0.2}s infinite`,
             }}

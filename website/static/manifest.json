@@ -14,36 +14,30 @@
       "name": "Documentation",
       "short_name": "Docs",
       "url": "/getting-started",
-      "icons": [
-        { "src": "img/merchant-protocol-shield.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "img/dataripple-shield.png", "sizes": "192x192" }]
     },
     {
       "name": "Installation",
       "short_name": "Install",
       "url": "/installation",
-      "icons": [
-        { "src": "img/merchant-protocol-shield.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "img/dataripple-shield.png", "sizes": "192x192" }]
     },
     {
       "name": "Commands",
       "short_name": "Commands",
       "url": "/commands",
-      "icons": [
-        { "src": "img/merchant-protocol-shield.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "img/dataripple-shield.png", "sizes": "192x192" }]
     }
   ],
   "icons": [
     {
-      "src": "img/merchant-protocol-shield.png",
+      "src": "img/dataripple-shield.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "img/merchant-protocol-shield.png",
+      "src": "img/dataripple-shield.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

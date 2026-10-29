@@ -14,7 +14,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -24,7 +24,7 @@ function QuickLinks() {
                 Getting Started
               </h4>
               <p>
-                Install Sulla Desktop and set up your AI-powered desktop
+                Install Ghost Agent and set up your AI-powered desktop
                 environment in minutes.
               </p>
               <ul className="menu__list">
@@ -60,7 +60,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -104,7 +104,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -146,7 +146,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -157,7 +157,7 @@ function QuickLinks() {
                 Extensions
               </h4>
               <p>
-                Extend Sulla Desktop with plugins and integrations to customize
+                Extend Ghost Agent with plugins and integrations to customize
                 your environment.
               </p>
               <ul className="menu__list">
@@ -181,7 +181,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -194,7 +194,7 @@ function QuickLinks() {
               </h4>
               <p>
                 Manage Docker containers, development environments, and services
-                all from Sulla Desktop.
+                all from Ghost Agent.
               </p>
               <ul className="menu__list">
                 <li>
@@ -226,7 +226,7 @@ function QuickLinks() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -238,8 +238,8 @@ function QuickLinks() {
                 API Reference
               </h4>
               <p>
-                Full API documentation for integrating with and extending Sulla
-                Desktop programmatically.
+                Full API documentation for integrating with and extending Ghost
+                Agent programmatically.
               </p>
               <ul className="menu__list">
                 <li>

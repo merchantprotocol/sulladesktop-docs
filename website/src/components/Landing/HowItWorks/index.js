@@ -4,15 +4,15 @@ export default function HowItWorks() {
   const items = [
     {
       step: '01',
-      title: 'Install Sulla Desktop',
-      desc: 'One command installs everything you need. Run curl -fsSL https://sulladesktop.com/install.sh | sh on macOS, Windows, or Linux.',
+      title: 'Install Ghost Agent',
+      desc: 'One command installs everything you need. Run curl -fsSL https://ghostagent.com/install.sh | sh on macOS, Windows, or Linux.',
       href: '/installation_and_setup/first-time-installation-guide',
       linkText: 'Installation docs',
     },
     {
       step: '02',
       title: 'Configure Your AI',
-      desc: 'Set up your preferred AI model — Grok, Claude, or local LLMs. Sulla Desktop connects to the models you choose.',
+      desc: 'Set up your preferred AI model — Grok, Claude, or local LLMs. Ghost Agent connects to the models you choose.',
       href: '/ai_configuration/choosing-ai-models',
       linkText: 'AI configuration guide',
     },
@@ -31,7 +31,7 @@ export default function HowItWorks() {
     <div
       style={{
         padding: '8rem 3rem',
-        background: '#0d1117',
+        background: '#121B27',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -45,7 +45,7 @@ export default function HowItWorks() {
           width: '100%',
           height: '100%',
           background:
-            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(234,84,40,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -70,16 +70,16 @@ export default function HowItWorks() {
             style={{
               flex: '0 1 80px',
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #5096b3)',
+              background: 'linear-gradient(90deg, transparent, #EA5428)',
             }}
           />
           <span
             style={{
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.65rem',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              color: '#6e7681',
+              color: '#7A8DA0',
             }}>
             How It Works
           </span>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
             style={{
               flex: '0 1 80px',
               height: 1,
-              background: 'linear-gradient(90deg, #5096b3, transparent)',
+              background: 'linear-gradient(90deg, #EA5428, transparent)',
             }}
           />
         </div>
@@ -96,9 +96,9 @@ export default function HowItWorks() {
         <h2
           style={{
             textAlign: 'center',
-            color: '#e6edf3',
+            color: '#DFE7F4',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily: "'Ubuntu', sans-serif",
             letterSpacing: '-0.02em',
             lineHeight: 1.1,
             marginBottom: 16,
@@ -110,8 +110,8 @@ export default function HowItWorks() {
         <p
           style={{
             textAlign: 'center',
-            color: '#8b949e',
-            fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+            color: '#ADBFD6',
+            fontFamily: "'Lexend', sans-serif",
             fontSize: '0.875rem',
             lineHeight: 1.7,
             maxWidth: 540,
@@ -139,13 +139,13 @@ export default function HowItWorks() {
                 maxWidth: 320,
                 padding: '2.5rem 2rem',
                 border: `1px solid ${
-                  hoveredCard === i ? '#5096b3' : '#30363d'
+                  hoveredCard === i ? '#EA5428' : '#2F3C4E'
                 }`,
                 borderRadius: 12,
-                background: '#161b22',
+                background: '#1A2535',
                 boxShadow:
                   hoveredCard === i
-                    ? '0 0 30px rgba(80,150,179,0.1), inset 0 1px 0 rgba(255,255,255,0.03)'
+                    ? '0 0 30px rgba(234,84,40,0.1), inset 0 1px 0 rgba(255,255,255,0.03)'
                     : 'inset 0 1px 0 rgba(255,255,255,0.03)',
                 transition:
                   'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
@@ -156,8 +156,8 @@ export default function HowItWorks() {
               }}>
               <span
                 style={{
-                  color: '#5096b3',
-                  fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                  color: '#EA5428',
+                  fontFamily: "'Lexend', sans-serif",
                   fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
                   fontWeight: 700,
                   display: 'block',
@@ -168,8 +168,8 @@ export default function HowItWorks() {
               </span>
               <h3
                 style={{
-                  color: '#e6edf3',
-                  fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                  color: '#DFE7F4',
+                  fontFamily: "'Lexend', sans-serif",
                   fontSize: '1.1rem',
                   marginBottom: 12,
                   fontWeight: 600,
@@ -178,8 +178,8 @@ export default function HowItWorks() {
               </h3>
               <p
                 style={{
-                  color: '#8b949e',
-                  fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                  color: '#ADBFD6',
+                  fontFamily: "'Lexend', sans-serif",
                   fontSize: '0.875rem',
                   lineHeight: 1.7,
                   marginBottom: 24,
@@ -190,8 +190,8 @@ export default function HowItWorks() {
               <a
                 href={item.href}
                 style={{
-                  color: '#5096b3',
-                  fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                  color: '#EA5428',
+                  fontFamily: "'Lexend', sans-serif",
                   fontWeight: 600,
                   fontSize: '0.875rem',
                   textDecoration: 'none',
@@ -199,7 +199,7 @@ export default function HowItWorks() {
                   ...(hoveredCard === i
                     ? {
                         color: '#fff',
-                        textShadow: '0 0 10px rgba(80,150,179,0.4)',
+                        textShadow: '0 0 10px rgba(234,84,40,0.4)',
                       }
                     : {}),
                 }}>

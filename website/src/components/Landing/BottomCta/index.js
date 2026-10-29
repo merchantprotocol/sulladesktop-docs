@@ -4,7 +4,7 @@ export default function BottomCta() {
   return (
     <div
       style={{
-        background: '#0d1117',
+        background: '#121B27',
         padding: '8rem 3rem',
         textAlign: 'center',
         position: 'relative',
@@ -24,7 +24,7 @@ export default function BottomCta() {
           width: '80%',
           height: '80%',
           background:
-            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(234,84,40,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -49,16 +49,16 @@ export default function BottomCta() {
               display: 'inline-block',
               width: 40,
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #5096b3)',
+              background: 'linear-gradient(90deg, transparent, #EA5428)',
             }}
           />
           <span
             style={{
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.65rem',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              color: '#6e7681',
+              color: '#7A8DA0',
             }}>
             READY TO START
           </span>
@@ -67,7 +67,7 @@ export default function BottomCta() {
               display: 'inline-block',
               width: 40,
               height: 1,
-              background: 'linear-gradient(90deg, #5096b3, transparent)',
+              background: 'linear-gradient(90deg, #EA5428, transparent)',
             }}
           />
         </div>
@@ -75,11 +75,11 @@ export default function BottomCta() {
         {/* Headline */}
         <h2
           style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily: "'Ubuntu', sans-serif",
             fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            color: '#e6edf3',
+            color: '#DFE7F4',
             marginBottom: 24,
           }}>
           Your AI desktop is waiting.
@@ -88,8 +88,8 @@ export default function BottomCta() {
         {/* Body */}
         <p
           style={{
-            fontFamily: "'JetBrains Mono', 'Courier New', monospace",
-            color: '#8b949e',
+            fontFamily: "'Lexend', sans-serif",
+            color: '#ADBFD6',
             fontSize: '0.95rem',
             lineHeight: 1.7,
             maxWidth: 600,
@@ -117,9 +117,9 @@ export default function BottomCta() {
               alignItems: 'center',
               gap: 8,
               padding: '14px 32px',
-              background: '#4485a0',
+              background: '#CC3B11',
               color: '#ffffff',
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.85rem',
               borderRadius: 8,
               letterSpacing: '0.05em',
@@ -138,13 +138,13 @@ export default function BottomCta() {
               gap: 8,
               padding: '14px 32px',
               background: 'transparent',
-              color: '#e6edf3',
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              color: '#DFE7F4',
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.85rem',
               borderRadius: 8,
               letterSpacing: '0.05em',
               textDecoration: 'none',
-              border: '1px solid #30363d',
+              border: '1px solid #2F3C4E',
               cursor: 'pointer',
               transition: 'all 0.2s ease',
             }}>
@@ -157,7 +157,7 @@ export default function BottomCta() {
           style={{
             height: 1,
             background:
-              'linear-gradient(90deg, transparent, #5096b3 20%, #5096b3 80%, transparent)',
+              'linear-gradient(90deg, transparent, #EA5428 20%, #EA5428 80%, transparent)',
             opacity: 0.3,
             marginBottom: 32,
           }}
@@ -179,11 +179,11 @@ export default function BottomCta() {
             <span
               key={i}
               style={{
-                fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                fontFamily: "'Lexend', sans-serif",
                 fontSize: '0.8rem',
-                color: '#8b949e',
+                color: '#ADBFD6',
               }}>
-              <span style={{color: '#5096b3', fontWeight: 700}}>
+              <span style={{color: '#EA5428', fontWeight: 700}}>
                 {stat.value}
               </span>{' '}
               {stat.label}

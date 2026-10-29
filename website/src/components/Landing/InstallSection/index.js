@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 export default function InstallSection() {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'curl -fsSL https://sulladesktop.com/install.sh | sh';
+  const installCmd = 'curl -fsSL https://ghostagent.com/install.sh | sh';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);
@@ -15,7 +15,7 @@ export default function InstallSection() {
       style={{
         position: 'relative',
         padding: '8rem 3rem',
-        background: '#0d1117',
+        background: '#121B27',
         overflow: 'hidden',
       }}>
       {/* Radial glow */}
@@ -28,7 +28,7 @@ export default function InstallSection() {
           height: '100%',
           transform: 'translate(-50%, -50%)',
           background:
-            'radial-gradient(circle, rgba(80,150,179,0.08) 0%, transparent 60%)',
+            'radial-gradient(circle, rgba(234,84,40,0.08) 0%, transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -53,16 +53,16 @@ export default function InstallSection() {
             style={{
               flex: '0 1 60px',
               height: 1,
-              background: 'linear-gradient(90deg, transparent, #5096b3)',
+              background: 'linear-gradient(90deg, transparent, #EA5428)',
             }}
           />
           <span
             style={{
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.65rem',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              color: '#6e7681',
+              color: '#7A8DA0',
             }}>
             Get Running in Seconds
           </span>
@@ -70,7 +70,7 @@ export default function InstallSection() {
             style={{
               flex: '0 1 60px',
               height: 1,
-              background: 'linear-gradient(90deg, #5096b3, transparent)',
+              background: 'linear-gradient(90deg, #EA5428, transparent)',
             }}
           />
         </div>
@@ -78,26 +78,26 @@ export default function InstallSection() {
         {/* Headline */}
         <h2
           style={{
-            color: '#e6edf3',
-            fontFamily: "'Playfair Display', Georgia, serif",
+            color: '#DFE7F4',
+            fontFamily: "'Ubuntu', sans-serif",
             fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
             marginBottom: 16,
             lineHeight: 1.3,
           }}>
-          Install Sulla Desktop with one command.
+          Install Ghost Agent with one command.
         </h2>
 
         {/* Subtext */}
         <p
           style={{
-            color: '#8b949e',
-            fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+            color: '#ADBFD6',
+            fontFamily: "'Lexend', sans-serif",
             fontSize: '0.85rem',
             marginBottom: 40,
             lineHeight: 1.6,
           }}>
-          Sulla Desktop handles the rest — AI, containers, and automation all
-          set up automatically.
+          Ghost Agent handles the rest — AI, containers, and automation all set
+          up automatically.
         </p>
 
         {/* Terminal */}
@@ -105,7 +105,7 @@ export default function InstallSection() {
           style={{
             maxWidth: 620,
             margin: '0 auto',
-            border: '1px solid #30363d',
+            border: '1px solid #2F3C4E',
             borderRadius: 10,
             overflow: 'hidden',
             boxShadow: '0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2)',
@@ -115,8 +115,8 @@ export default function InstallSection() {
               display: 'flex',
               alignItems: 'center',
               padding: '12px 16px',
-              background: '#1c2128',
-              borderBottom: '1px solid #30363d',
+              background: '#1E2A3A',
+              borderBottom: '1px solid #2F3C4E',
             }}>
             <span
               style={{
@@ -152,7 +152,7 @@ export default function InstallSection() {
               style={{
                 flex: 1,
                 textAlign: 'center',
-                color: '#8b949e',
+                color: '#ADBFD6',
                 fontSize: '0.75rem',
                 fontFamily: "'JetBrains Mono', 'Courier New', monospace",
                 letterSpacing: '0.05em',
@@ -176,7 +176,7 @@ export default function InstallSection() {
               onMouseEnter={e => {
                 e.currentTarget.style.opacity = '1';
                 e.currentTarget.style.filter =
-                  'drop-shadow(0 0 6px rgba(80,150,179,0.6))';
+                  'drop-shadow(0 0 6px rgba(234,84,40,0.6))';
               }}
               onMouseLeave={e => {
                 if (!copied) {
@@ -190,7 +190,7 @@ export default function InstallSection() {
                   height="16"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -202,7 +202,7 @@ export default function InstallSection() {
                   height="16"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#8b949e"
+                  stroke="#ADBFD6"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
@@ -215,14 +215,14 @@ export default function InstallSection() {
           <div
             style={{
               padding: '24px 24px',
-              background: '#0d1117',
+              background: '#121B27',
               fontFamily: "'JetBrains Mono', 'Courier New', monospace",
               fontSize: '0.9rem',
-              color: '#e6edf3',
+              color: '#DFE7F4',
               lineHeight: 1.6,
             }}>
             <code>
-              <span style={{color: '#5096b3'}}>$</span> {installCmd}
+              <span style={{color: '#EA5428'}}>$</span> {installCmd}
             </code>
           </div>
         </div>
@@ -240,11 +240,11 @@ export default function InstallSection() {
             <span
               key={platform}
               style={{
-                border: '1px solid #30363d',
+                border: '1px solid #2F3C4E',
                 borderRadius: 20,
                 padding: '6px 16px',
-                color: '#8b949e',
-                fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                color: '#ADBFD6',
+                fontFamily: "'Lexend', sans-serif",
                 fontSize: '0.75rem',
                 letterSpacing: '0.05em',
               }}>

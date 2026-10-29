@@ -1,6 +1,6 @@
-# Merchant Protocol Design Guide
+# DataRipple Design Guide
 
-> This document defines the Merchant Protocol brand design system. It is the single source of truth for colors, typography, spacing, effects, and component patterns used across all Merchant Protocol properties — including docs, marketing pages, and tools. The canonical reference is the main website theme at `www-merchantprotocol/wp-content/themes/merchantprotocol`.
+> This document defines the DataRipple brand design system. It is the single source of truth for colors, typography, spacing, effects, and component patterns used across all DataRipple properties — including docs, marketing pages, and tools. The canonical reference is the main website theme at `www-dataripple/wp-content/themes/dataripple`.
 
 ---
 

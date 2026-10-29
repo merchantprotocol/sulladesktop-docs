@@ -1,18 +1,7 @@
 services:
   app:
-    container_name: sulladesktop-docs
-    image: byrdziak/merchantprotocol-webserver-nginx-php8.1:initial
+    container_name: ghostagent-docs
+    image: ghcr.io/dataripple/ghostagent-docs:latest
     restart: unless-stopped
-    hostname: ${DOCKER_HOSTNAME}
     ports:
       - "6147:80"
-      - "6149:443"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    volumes:
-      - ".:/var/www/html:rw"
-      - "../protocol-docs-config/:/var/www/protocol-docs-config:rw"
-    ulimits:
-      core:
-        hard: 0
-        soft: 0

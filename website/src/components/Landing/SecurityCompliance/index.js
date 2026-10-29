@@ -14,7 +14,7 @@ const features = [
   {
     num: '03',
     title: 'No Cloud Dependencies',
-    desc: 'Sulla Desktop runs entirely on your hardware. No accounts, no telemetry, no third-party services required for core functionality.',
+    desc: 'Ghost Agent runs entirely on your hardware. No accounts, no telemetry, no third-party services required for core functionality.',
   },
   {
     num: '04',
@@ -30,7 +30,7 @@ export default function SecurityCompliance() {
     <div
       style={{
         padding: '8rem 3rem',
-        background: '#0d1117',
+        background: '#121B27',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -51,11 +51,11 @@ export default function SecurityCompliance() {
           }}>
           <span
             style={{
-              fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+              fontFamily: "'Lexend', sans-serif",
               fontSize: '0.65rem',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              color: '#6e7681',
+              color: '#7A8DA0',
             }}>
             Privacy &amp; Security
           </span>
@@ -64,7 +64,7 @@ export default function SecurityCompliance() {
               flex: 1,
               height: 1,
               background:
-                'linear-gradient(90deg, #5096b3 0%, transparent 100%)',
+                'linear-gradient(90deg, #EA5428 0%, transparent 100%)',
               opacity: 0.3,
             }}
           />
@@ -82,9 +82,9 @@ export default function SecurityCompliance() {
           <div style={{position: 'sticky', top: '6rem'}}>
             <h2
               style={{
-                color: '#e6edf3',
+                color: '#DFE7F4',
                 fontSize: 'clamp(2.8rem, 6vw, 4.5rem)',
-                fontFamily: "'Playfair Display', Georgia, serif",
+                fontFamily: "'Ubuntu', sans-serif",
                 fontWeight: 900,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.0,
@@ -92,19 +92,19 @@ export default function SecurityCompliance() {
               }}>
               Private by design,
               <br />
-              <span style={{color: '#5096b3'}}>secure by default</span>
+              <span style={{color: '#EA5428'}}>secure by default</span>
             </h2>
 
             <p
               style={{
-                color: '#8b949e',
-                fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                color: '#ADBFD6',
+                fontFamily: "'Lexend', sans-serif",
                 fontSize: '0.85rem',
                 lineHeight: 1.7,
                 marginBottom: 40,
                 maxWidth: 400,
               }}>
-              Your AI, your data, your machine. Sulla Desktop keeps everything
+              Your AI, your data, your machine. Ghost Agent keeps everything
               local — no cloud required, no data leaks.
             </p>
 
@@ -113,13 +113,13 @@ export default function SecurityCompliance() {
               <svg width="120" height="140" viewBox="0 0 120 140" fill="none">
                 <path
                   d="M60 8L16 28V64C16 96 60 132 60 132S104 96 104 64V28L60 8Z"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="1.5"
-                  fill="rgba(80,150,179,0.05)"
+                  fill="rgba(234,84,40,0.05)"
                 />
                 <path
                   d="M46 68L56 78L76 58"
-                  stroke="#5096b3"
+                  stroke="#EA5428"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -134,7 +134,7 @@ export default function SecurityCompliance() {
                   height: 200,
                   transform: 'translate(-50%, -50%)',
                   background:
-                    'radial-gradient(circle, rgba(80,150,179,0.12) 0%, transparent 70%)',
+                    'radial-gradient(circle, rgba(234,84,40,0.12) 0%, transparent 70%)',
                   pointerEvents: 'none',
                 }}
               />
@@ -151,7 +151,7 @@ export default function SecurityCompliance() {
                 style={{
                   padding: '28px 0',
                   borderBottom:
-                    i < features.length - 1 ? '1px solid #21262d' : 'none',
+                    i < features.length - 1 ? '1px solid #2F3C4E' : 'none',
                   transition: 'padding-left 0.3s ease',
                   paddingLeft: hoveredItem === i ? 12 : 0,
                 }}>
@@ -164,9 +164,9 @@ export default function SecurityCompliance() {
                   }}>
                   <span
                     style={{
-                      fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                      fontFamily: "'Lexend', sans-serif",
                       fontSize: '0.7rem',
-                      color: hoveredItem === i ? '#5096b3' : '#6e7681',
+                      color: hoveredItem === i ? '#EA5428' : '#7A8DA0',
                       letterSpacing: '0.1em',
                       transition: 'color 0.3s ease',
                     }}>
@@ -174,8 +174,8 @@ export default function SecurityCompliance() {
                   </span>
                   <h3
                     style={{
-                      color: '#e6edf3',
-                      fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                      color: '#DFE7F4',
+                      fontFamily: "'Lexend', sans-serif",
                       fontSize: '1rem',
                       fontWeight: 600,
                       margin: 0,
@@ -185,8 +185,8 @@ export default function SecurityCompliance() {
                 </div>
                 <p
                   style={{
-                    color: '#8b949e',
-                    fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+                    color: '#ADBFD6',
+                    fontFamily: "'Lexend', sans-serif",
                     fontSize: '0.825rem',
                     lineHeight: 1.7,
                     margin: 0,

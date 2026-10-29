@@ -11,12 +11,12 @@ function HeroSvg() {
       {/* Background glow */}
       <defs>
         <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#5096b3" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#5096b3" stopOpacity="0" />
+          <stop offset="0%" stopColor="#EA5428" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#EA5428" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#5096b3" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#5096b3" stopOpacity="0" />
+          <stop offset="0%" stopColor="#EA5428" stopOpacity="0.3" />
+          <stop offset="100%" stopColor="#EA5428" stopOpacity="0" />
         </radialGradient>
         <filter id="glow">
           <feGaussianBlur stdDeviation="3" result="blur" />
@@ -37,7 +37,7 @@ function HeroSvg() {
       <ellipse cx="300" cy="200" rx="280" ry="180" fill="url(#heroGlow)" />
 
       {/* Grid floor perspective lines */}
-      <g opacity="0.15" stroke="#5096b3" strokeWidth="0.5">
+      <g opacity="0.15" stroke="#EA5428" strokeWidth="0.5">
         <line x1="300" y1="160" x2="0" y2="400" />
         <line x1="300" y1="160" x2="100" y2="400" />
         <line x1="300" y1="160" x2="200" y2="400" />
@@ -62,8 +62,8 @@ function HeroSvg() {
           height="120"
           rx="8"
           ry="8"
-          fill="#161b22"
-          stroke="#5096b3"
+          fill="#1A2535"
+          stroke="#EA5428"
           strokeWidth="1.5"
           filter="url(#glow)"
         />
@@ -75,27 +75,27 @@ function HeroSvg() {
           height="24"
           rx="8"
           ry="0"
-          fill="#21262d"
+          fill="#2F3C4E"
         />
-        <rect x="0" y="8" width="180" height="16" fill="#21262d" />
+        <rect x="0" y="8" width="180" height="16" fill="#2F3C4E" />
         {/* Traffic lights */}
         <circle cx="16" cy="12" r="4" fill="#f85149" opacity="0.8" />
         <circle cx="30" cy="12" r="4" fill="#e3b341" opacity="0.8" />
-        <circle cx="44" cy="12" r="4" fill="#5096b3" opacity="0.8" />
+        <circle cx="44" cy="12" r="4" fill="#EA5428" opacity="0.8" />
         {/* Terminal text */}
         <text
           x="12"
           y="44"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="10"
           fontFamily="monospace"
           opacity="0.9">
-          $ curl -fsSL https://sulladesktop.com/install.sh | sh
+          $ curl -fsSL https://ghostagent.com/install.sh | sh
         </text>
         <text
           x="12"
           y="60"
-          fill="#6ab0cc"
+          fill="#F7714A"
           fontSize="10"
           fontFamily="monospace"
           opacity="0.7">
@@ -104,7 +104,7 @@ function HeroSvg() {
         <text
           x="12"
           y="80"
-          fill="#8b949e"
+          fill="#ADBFD6"
           fontSize="9"
           fontFamily="monospace"
           opacity="0.6">
@@ -113,7 +113,7 @@ function HeroSvg() {
         <text
           x="12"
           y="96"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="9"
           fontFamily="monospace"
           opacity="0.8">
@@ -122,7 +122,7 @@ function HeroSvg() {
         <text
           x="12"
           y="110"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="10"
           fontFamily="monospace"
           className="terminal-cursor">
@@ -137,7 +137,7 @@ function HeroSvg() {
           cy="120"
           r="30"
           fill="none"
-          stroke="#5096b3"
+          stroke="#EA5428"
           strokeWidth="0.8"
           opacity="0.3">
           <animate
@@ -158,7 +158,7 @@ function HeroSvg() {
           cy="120"
           r="30"
           fill="none"
-          stroke="#5096b3"
+          stroke="#EA5428"
           strokeWidth="0.8"
           opacity="0.3">
           <animate
@@ -181,7 +181,7 @@ function HeroSvg() {
           cy="120"
           r="30"
           fill="none"
-          stroke="#5096b3"
+          stroke="#EA5428"
           strokeWidth="0.8"
           opacity="0.3">
           <animate
@@ -210,13 +210,13 @@ function HeroSvg() {
           width="50"
           height="44"
           rx="4"
-          fill="#161b22"
-          stroke="#5096b3"
+          fill="#1A2535"
+          stroke="#EA5428"
           strokeWidth="1"
           opacity="0.9"
         />
-        <rect x="10" y="14" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="18" r="2.5" fill="#5096b3">
+        <rect x="10" y="14" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="18" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -224,8 +224,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="26" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="30" r="2.5" fill="#5096b3">
+        <rect x="10" y="26" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="30" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -234,8 +234,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="38" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="42" r="2.5" fill="#5096b3">
+        <rect x="10" y="38" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="42" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -247,7 +247,7 @@ function HeroSvg() {
         <text
           x="30"
           y="65"
-          fill="#8b949e"
+          fill="#ADBFD6"
           fontSize="8"
           fontFamily="monospace"
           textAnchor="middle">
@@ -261,7 +261,7 @@ function HeroSvg() {
         y1="140"
         x2="110"
         y2="200"
-        stroke="#5096b3"
+        stroke="#EA5428"
         strokeWidth="0.8"
         opacity="0.4"
         strokeDasharray="4 3">
@@ -282,13 +282,13 @@ function HeroSvg() {
           width="50"
           height="44"
           rx="4"
-          fill="#161b22"
-          stroke="#5096b3"
+          fill="#1A2535"
+          stroke="#EA5428"
           strokeWidth="1"
           opacity="0.9"
         />
-        <rect x="10" y="14" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="18" r="2.5" fill="#5096b3">
+        <rect x="10" y="14" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="18" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -297,8 +297,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="26" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="30" r="2.5" fill="#5096b3">
+        <rect x="10" y="26" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="30" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -307,8 +307,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="38" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="42" r="2.5" fill="#5096b3">
+        <rect x="10" y="38" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="42" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -320,7 +320,7 @@ function HeroSvg() {
         <text
           x="30"
           y="65"
-          fill="#8b949e"
+          fill="#ADBFD6"
           fontSize="8"
           fontFamily="monospace"
           textAnchor="middle">
@@ -334,7 +334,7 @@ function HeroSvg() {
         y1="140"
         x2="490"
         y2="200"
-        stroke="#5096b3"
+        stroke="#EA5428"
         strokeWidth="0.8"
         opacity="0.4"
         strokeDasharray="4 3">
@@ -355,13 +355,13 @@ function HeroSvg() {
           width="50"
           height="44"
           rx="4"
-          fill="#161b22"
-          stroke="#5096b3"
+          fill="#1A2535"
+          stroke="#EA5428"
           strokeWidth="1"
           opacity="0.9"
         />
-        <rect x="10" y="10" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="14" r="2.5" fill="#5096b3">
+        <rect x="10" y="10" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="14" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -370,8 +370,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="22" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="26" r="2.5" fill="#5096b3">
+        <rect x="10" y="22" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="26" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -380,8 +380,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="34" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="38" r="2.5" fill="#5096b3">
+        <rect x="10" y="34" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="38" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -393,7 +393,7 @@ function HeroSvg() {
         <text
           x="30"
           y="61"
-          fill="#8b949e"
+          fill="#ADBFD6"
           fontSize="8"
           fontFamily="monospace"
           textAnchor="middle">
@@ -407,7 +407,7 @@ function HeroSvg() {
         y1="180"
         x2="180"
         y2="300"
-        stroke="#5096b3"
+        stroke="#EA5428"
         strokeWidth="0.8"
         opacity="0.4"
         strokeDasharray="4 3">
@@ -429,13 +429,13 @@ function HeroSvg() {
           width="50"
           height="44"
           rx="4"
-          fill="#161b22"
-          stroke="#5096b3"
+          fill="#1A2535"
+          stroke="#EA5428"
           strokeWidth="1"
           opacity="0.9"
         />
-        <rect x="10" y="10" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="14" r="2.5" fill="#5096b3">
+        <rect x="10" y="10" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="14" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -444,8 +444,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="22" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="26" r="2.5" fill="#5096b3">
+        <rect x="10" y="22" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="26" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -454,8 +454,8 @@ function HeroSvg() {
             repeatCount="indefinite"
           />
         </circle>
-        <rect x="10" y="34" width="40" height="8" rx="2" fill="#21262d" />
-        <circle cx="42" cy="38" r="2.5" fill="#5096b3">
+        <rect x="10" y="34" width="40" height="8" rx="2" fill="#2F3C4E" />
+        <circle cx="42" cy="38" r="2.5" fill="#EA5428">
           <animate
             attributeName="opacity"
             values="1;0.4;1"
@@ -467,7 +467,7 @@ function HeroSvg() {
         <text
           x="30"
           y="61"
-          fill="#8b949e"
+          fill="#ADBFD6"
           fontSize="8"
           fontFamily="monospace"
           textAnchor="middle">
@@ -481,7 +481,7 @@ function HeroSvg() {
         y1="180"
         x2="420"
         y2="300"
-        stroke="#5096b3"
+        stroke="#EA5428"
         strokeWidth="0.8"
         opacity="0.4"
         strokeDasharray="4 3">
@@ -499,7 +499,7 @@ function HeroSvg() {
         <text
           x="120"
           y="175"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="12"
           fontFamily="monospace"
           opacity="0">
@@ -522,7 +522,7 @@ function HeroSvg() {
         <text
           x="490"
           y="175"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="12"
           fontFamily="monospace"
           opacity="0">
@@ -545,7 +545,7 @@ function HeroSvg() {
         <text
           x="180"
           y="285"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="12"
           fontFamily="monospace"
           opacity="0">
@@ -568,7 +568,7 @@ function HeroSvg() {
         <text
           x="430"
           y="285"
-          fill="#5096b3"
+          fill="#EA5428"
           fontSize="12"
           fontFamily="monospace"
           opacity="0">

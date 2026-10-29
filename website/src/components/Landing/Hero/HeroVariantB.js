@@ -34,7 +34,7 @@ const responsiveStyle = `
     .heroB-pullquote {
       border-left: none !important;
       padding-left: 0 !important;
-      border-top: 3px solid #5096b3;
+      border-top: 3px solid #EA5428;
       padding-top: 1.5rem;
     }
     .heroB-cta {
@@ -51,7 +51,7 @@ const styles = {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
-    background: '#0d1117',
+    background: '#121B27',
     overflow: 'hidden',
   },
   gridLines: {
@@ -61,8 +61,8 @@ const styles = {
     right: 0,
     bottom: 0,
     backgroundImage: `
-      linear-gradient(rgba(80,150,179,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(80,150,179,0.03) 1px, transparent 1px)
+      linear-gradient(rgba(234,84,40,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(234,84,40,0.03) 1px, transparent 1px)
     `,
     backgroundSize: '80px 80px',
     pointerEvents: 'none',
@@ -81,12 +81,12 @@ const styles = {
   },
   left: {},
   volume: {
-    fontFamily: "'JetBrains Mono', monospace",
+    fontFamily: "'Lexend', sans-serif",
     fontSize: '0.6rem',
     fontWeight: 500,
     letterSpacing: '0.3em',
     textTransform: 'uppercase',
-    color: '#6e7681',
+    color: '#7A8DA0',
     marginBottom: '2rem',
     display: 'flex',
     alignItems: 'center',
@@ -96,54 +96,54 @@ const styles = {
     width: '6px',
     height: '6px',
     borderRadius: '50%',
-    background: '#5096b3',
-    boxShadow: '0 0 8px rgba(80, 150, 179, 0.6)',
+    background: '#EA5428',
+    boxShadow: '0 0 8px rgba(234, 84, 40, 0.6)',
     animation: 'heroBPulse 2s ease-in-out infinite',
   },
   headline: {
-    fontFamily: "'Playfair Display', Georgia, serif",
+    fontFamily: "'Ubuntu', sans-serif",
     fontWeight: 900,
     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
     lineHeight: 1.05,
-    color: '#e6edf3',
+    color: '#DFE7F4',
     margin: 0,
     letterSpacing: '-0.02em',
   },
   headlineItalic: {
     fontStyle: 'italic',
-    color: '#5096b3',
+    color: '#EA5428',
     display: 'block',
-    textShadow: '0 0 60px rgba(80, 150, 179, 0.3)',
+    textShadow: '0 0 60px rgba(234, 84, 40, 0.3)',
   },
   greenRule: {
     height: '3px',
-    background: '#5096b3',
-    boxShadow: '0 0 12px rgba(80, 150, 179, 0.4)',
+    background: '#EA5428',
+    boxShadow: '0 0 12px rgba(234, 84, 40, 0.4)',
     margin: '2.5rem 0 0',
     animation: 'heroBLineGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards',
     width: 0,
   },
   right: {},
   pullQuote: {
-    fontFamily: "'Playfair Display', Georgia, serif",
+    fontFamily: "'Ubuntu', sans-serif",
     fontWeight: 700,
     fontStyle: 'italic',
     fontSize: '1.35rem',
     lineHeight: 1.5,
-    color: '#e6edf3',
-    borderLeft: '3px solid #5096b3',
+    color: '#DFE7F4',
+    borderLeft: '3px solid #EA5428',
     paddingLeft: '1.5rem',
     marginBottom: '1.5rem',
   },
   body: {
-    fontFamily: "'JetBrains Mono', monospace",
+    fontFamily: "'Lexend', sans-serif",
     fontSize: '0.85rem',
     lineHeight: 1.8,
-    color: '#8b949e',
+    color: '#ADBFD6',
     marginBottom: '2rem',
   },
   terminal: {
-    border: '1px solid #30363d',
+    border: '1px solid #2F3C4E',
     borderRadius: '10px',
     overflow: 'hidden',
     boxShadow: '0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2)',
@@ -153,8 +153,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     padding: '10px 14px',
-    background: '#1c2128',
-    borderBottom: '1px solid #30363d',
+    background: '#1E2A3A',
+    borderBottom: '1px solid #2F3C4E',
   },
   dot: color => ({
     width: '10px',
@@ -170,7 +170,7 @@ const styles = {
     textAlign: 'center',
     fontFamily: "'JetBrains Mono', monospace",
     fontSize: '0.7rem',
-    color: '#6e7681',
+    color: '#7A8DA0',
     letterSpacing: '0.05em',
   },
   copyBtn: copied => ({
@@ -186,14 +186,14 @@ const styles = {
   }),
   termBody: {
     padding: '20px 24px',
-    background: '#0d1117',
+    background: '#121B27',
     fontFamily: "'JetBrains Mono', monospace",
     fontSize: '0.9rem',
-    color: '#e6edf3',
+    color: '#DFE7F4',
     lineHeight: 1.6,
   },
   prompt: {
-    color: '#5096b3',
+    color: '#EA5428',
   },
   badges: {
     display: 'flex',
@@ -201,11 +201,11 @@ const styles = {
     flexWrap: 'wrap',
   },
   badge: {
-    border: '1px solid #30363d',
+    border: '1px solid #2F3C4E',
     borderRadius: '20px',
     padding: '5px 14px',
-    color: '#8b949e',
-    fontFamily: "'JetBrains Mono', monospace",
+    color: '#ADBFD6',
+    fontFamily: "'Lexend', sans-serif",
     fontSize: '0.7rem',
     letterSpacing: '0.05em',
   },
@@ -213,7 +213,7 @@ const styles = {
 
 function HeroVariantB() {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'curl -fsSL https://sulladesktop.com/install.sh | sh';
+  const installCmd = 'curl -fsSL https://ghostagent.com/install.sh | sh';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);
@@ -240,7 +240,7 @@ function HeroVariantB() {
             height: '900px',
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(80,150,179,0.1) 0%, rgba(80,150,179,0.04) 35%, transparent 65%)',
+              'radial-gradient(circle, rgba(234,84,40,0.1) 0%, rgba(234,84,40,0.04) 35%, transparent 65%)',
             pointerEvents: 'none',
           }}
         />
@@ -249,7 +249,7 @@ function HeroVariantB() {
           <div style={styles.left}>
             <div style={styles.volume}>
               <span style={styles.volumeDot} />
-              <span>Sulla Desktop</span>
+              <span>Ghost Agent</span>
             </div>
 
             <h2 style={styles.headline}>
@@ -268,7 +268,7 @@ function HeroVariantB() {
             </div>
 
             <p style={styles.body}>
-              Sulla Desktop brings AI, Docker, n8n workflows, and local LLM
+              Ghost Agent brings AI, Docker, n8n workflows, and local LLM
               support together. Install with Homebrew and start building.
             </p>
 
@@ -286,7 +286,7 @@ function HeroVariantB() {
                   onMouseEnter={e => {
                     e.currentTarget.style.opacity = '1';
                     e.currentTarget.style.filter =
-                      'drop-shadow(0 0 6px rgba(80,150,179,0.6))';
+                      'drop-shadow(0 0 6px rgba(234,84,40,0.6))';
                   }}
                   onMouseLeave={e => {
                     if (!copied) e.currentTarget.style.opacity = '0.4';
@@ -298,7 +298,7 @@ function HeroVariantB() {
                       height="16"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#5096b3"
+                      stroke="#EA5428"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round">
@@ -310,7 +310,7 @@ function HeroVariantB() {
                       height="16"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#8b949e"
+                      stroke="#ADBFD6"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round">

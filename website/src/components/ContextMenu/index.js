@@ -116,7 +116,7 @@ export default function ContextMenu() {
   const [position, setPosition] = useState({x: 0, y: 0});
   const [openRight, setOpenRight] = useState(true);
   const menuRef = useRef(null);
-  const logoSrc = useBaseUrl('img/favicon-sulla.png');
+  const logoSrc = useBaseUrl('img/favicon-ghostagent.png');
 
   const handleContextMenu = useCallback(e => {
     e.preventDefault();
@@ -211,7 +211,7 @@ export default function ContextMenu() {
 
         {/* GitHub link */}
         <a
-          href="https://github.com/merchantprotocol/protocol"
+          href="https://github.com/dataripple/ghostagent"
           className={styles.menuItem}
           target="_blank"
           rel="noopener noreferrer"

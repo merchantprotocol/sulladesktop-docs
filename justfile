@@ -1,30 +1,44 @@
-# Sulla Desktop Documentation Site
+# Ghost Agent Documentation Site
+
+image := "ghcr.io/dataripple/ghostagent-docs:latest"
 
 # Show available commands
 default:
     @just --list
 
-# Open the local dev server in the default browser
-open port="6149":
-    open "https://localhost:{{port}}"
-
-# Install all dependencies
+# Install all dependencies locally (for dev)
 install:
     yarn install
 
-# Start the dev server with hot reload on port 80
-start:
-    protocol start
-
-stop:
-    protocol stop
-
-restart:
-    protocol restart
-
-# Build the static site for production
+# Build the Docker image with the static site baked in
 build:
-    yarn website:build
+    docker build -t {{image}} .
+
+# Start the container on port 6147
+start:
+    docker compose up -d
+
+# Stop the container
+stop:
+    docker compose down
+
+# Restart the container
+restart: stop start
+
+# Push the image to GitHub Container Registry
+push:
+    docker push {{image}}
+
+# Build and push in one step
+release: build push
+
+# Open the local site in the browser
+open:
+    open "http://localhost:6147"
+
+# Dev server with hot reload (no Docker)
+dev:
+    cd website && yarn start
 
 # Clean build artifacts and Docusaurus cache
 clean:
@@ -32,42 +46,6 @@ clean:
 
 # Full rebuild from clean state
 rebuild: clean build
-
-# Show changes between current build and last deployed backup
-status:
-    ./cloudflare.sh status
-
-# Backup the build output
-backup:
-    ./cloudflare.sh backup
-
-# Verify build completeness
-verify:
-    ./cloudflare.sh verify
-
-# Deploy to Cloudflare Pages (build + verify + confirm + backup + deploy)
-deploy: build
-    ./cloudflare.sh deploy
-
-# Deploy a preview branch (build + verify + confirm + backup + deploy)
-deploy-preview: build
-    ./cloudflare.sh deploy-preview
-
-# List all backups
-backups:
-    ./cloudflare.sh backups
-
-# Remove all backups
-clean-backups:
-    ./cloudflare.sh clean-backups
-
-# Format all source files
-format:
-    cd website && yarn format:source && yarn format:markdown && yarn format:style
-
-# Lint docs and source
-lint:
-    cd website && yarn lint
 
 # Clear cache, reinstall, and start fresh
 reset: clean

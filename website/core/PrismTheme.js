@@ -1,30 +1,30 @@
 /**
- * Merchant Protocol - Terminal-inspired Prism theme
- * Dark background with steel blue accent coding colors
+ * DataRipple - Ghost Agent Prism theme
+ * Dark navy background with orange accent coding colors
  */
 
 const theme = {
   plain: {
-    color: '#e6edf3',
-    backgroundColor: '#0d1117',
+    color: '#DFE7F4',
+    backgroundColor: '#121B27',
   },
   styles: [
     {
       types: ['property'],
       style: {
-        color: '#88c3d9',
+        color: '#F7714A',
       },
     },
     {
       types: ['attr-name', 'comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: '#8b949e',
+        color: '#ADBFD6',
       },
     },
     {
       types: ['punctuation'],
       style: {
-        color: '#6e7681',
+        color: '#7A8DA0',
       },
     },
     {
@@ -36,25 +36,25 @@ const theme = {
     {
       types: ['selector', 'char', 'builtin', 'url'],
       style: {
-        color: '#79c0ff',
+        color: '#00B8D4',
       },
     },
     {
       types: ['entity'],
       style: {
-        color: '#88c3d9',
+        color: '#F7714A',
       },
     },
     {
       types: ['atrule', 'inserted'],
       style: {
-        color: '#5096B3',
+        color: '#4CAF50',
       },
     },
     {
       types: ['important', 'variable', 'deleted'],
       style: {
-        color: '#f85149',
+        color: '#E53935',
       },
     },
     {
@@ -78,43 +78,43 @@ const theme = {
     {
       types: ['attr-name', 'keyword'],
       style: {
-        color: '#ff7b72',
+        color: '#EA5428',
       },
     },
     {
       types: ['string', 'regex', 'attr-value'],
       style: {
-        color: '#a5d6ff',
+        color: '#00B8D4',
       },
     },
     {
       types: ['number', 'constant', 'symbol'],
       style: {
-        color: '#79c0ff',
+        color: '#F7714A',
       },
     },
     {
       types: ['boolean'],
       style: {
-        color: '#ff7b72',
+        color: '#EA5428',
       },
     },
     {
       types: ['class-name'],
       style: {
-        color: '#ffa657',
+        color: '#FFA88A',
       },
     },
     {
       types: ['function'],
       style: {
-        color: '#d2a8ff',
+        color: '#00B8D4',
       },
     },
     {
       types: ['operator', 'tag'],
       style: {
-        color: '#88c3d9',
+        color: '#F7714A',
       },
     },
   ],

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 COMMAND="${1:-deploy}"
-PROJECT="${2:-sulladesktop-docs}"
+PROJECT="${2:-ghostagent-docs}"
 BUILD_DIR="./website/build"
 BACKUP_DIR=".backups"
 BACKUP_PREFIX="build-backup"
@@ -248,7 +248,7 @@ deploy() {
     echo ""
     echo "  ┌──────────────────────────────────────────────────────┐"
     echo "  │  Deploy complete!                                    │"
-    echo "  │  Live at: https://docs.sulladesktop.com              │"
+    echo "  │  Live at: https://docs.ghostagent.dataripple.ai              │"
     echo "  └──────────────────────────────────────────────────────┘"
 }
 
