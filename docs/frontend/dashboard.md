@@ -86,7 +86,7 @@ Chronological log of all events during the call — tool calls, context messages
 The dashboard connects to the Gateway WebSocket on mount:
 
 ```
-ws://gateway-host/ws/{userId}?role=FE&token={accessToken}
+ws://gateway-host:8080/ws/{userId}?role=FE&token={accessToken}
 ```
 
 See [WebSocket Events](../api/websocket.md) for the full event reference.
