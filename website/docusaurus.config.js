@@ -5,7 +5,7 @@ const commonDocsOptions = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   editUrl:
-    'https://github.com/sulla-ai/sulla-desktop/blob/main/sulladesktop-docs/website/',
+    'https://github.com/merchantprotocol/sulla-desktop/blob/main/docs/website/',
   remarkPlugins: [],
 };
 
@@ -17,7 +17,7 @@ module.exports = {
   tagline: 'AI-powered desktop app with Docker, automation, and local LLMs.',
   organizationName: 'sulla-ai',
   projectName: 'sulla-desktop',
-  url: 'https://sulladesktop.com',
+  url: 'https://docs.sulladesktop.com',
   baseUrl: '/',
   clientModules: [
     require.resolve('./modules/jumpToFragment.js'),
@@ -66,6 +66,9 @@ module.exports = {
             type: 'all',
             copyright,
           },
+        },
+        pages: {
+          exclude: ['**/Landing/**'],
         },
         theme: {
           customCss: [

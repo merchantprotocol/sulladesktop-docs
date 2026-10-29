@@ -170,11 +170,11 @@ openInBrowser: true
 
 extraUrls:
   - label: 'Roundcube Webmail'
-    url: 'http://localhost:8080/webmail'
+    url: '/webmail'
   - label: 'SOGo Calendar'
-    url: 'http://localhost:8080/SOGo'
+    url: '/SOGo'
   - label: 'Admin Panel (direct)'
-    url: 'http://localhost:8080/mailcow'
+    url: '/mailcow'
 
 env:
   DOMAIN: 'yourdomain.com'
